@@ -4,15 +4,13 @@
     box-shadow: 2px 2px 5px rgb(19, 19, 20);
 }
 
-.containerFirstPage {
-    vertical-align: middle
-}
 
 .backgroundFirstpage {
     background: none !important;
-    backdrop-filter: blur(200px) !important;
+    backdrop-filter: blur(180px) !important;
+    border-radius: 3rem;
     border: 1.5px solid rgb(134, 134, 141);
-    box-shadow: 3px 3px 18px rgb(10, 10, 10), -2px -2px 5px rgb(23, 23, 26);
+    box-shadow: 3px 4px 18px rgb(10, 10, 10), -2px -2px 5px rgb(3, 3, 3);
 }
 
 .textOne {
@@ -63,14 +61,24 @@
 /* responsive option*/
 
 
-@media only screen and (max-height : 980px) {
-    .containerFirstPage {
-        margin-top: 12rem;
+
+@media screen and (min-width: 1024px){
+    .containerFirstPage{
+        margin-top: 9% !important;
     }
 }
 
-@media only screen and (max-height : 1300px) {
-    .containerFirstPage {
-        margin-top: 14rem;
+@media screen and (min-width:328px) , (max-width: 768px){
+    .containerFirstPage{
+        margin-top: 31%;
     }
 }
+
+
+@media screen and (min-width: 0px) , (max-width: 327px) {
+    .containerFirstPage{
+        margin-top: 40%;
+    }
+}
+
+
