@@ -1,4 +1,8 @@
 @font-face {
-    font-family: "Servillana";
+    font-family: Servillana;
     src: url('./Sevillana-Regular.ttf');
+}
+@font-face {
+    font-family: Merienda ;
+    src: url('./Merienda-VariableFont_wght.ttf');
 }

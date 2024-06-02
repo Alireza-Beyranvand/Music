@@ -4,7 +4,6 @@
     box-shadow: 2px 2px 5px rgb(19, 19, 20);
 }
 
-
 .backgroundFirstpage {
     background: none !important;
     backdrop-filter: blur(180px) !important;
@@ -15,7 +14,7 @@
 
 .textOne {
     font-size: 6vw;
-    font-family: "Servillana", Georgia, 'Times New Roman', Times, serif;
+    font-family: Servillana, Georgia, 'Times New Roman', Times, serif;
 }
 
 .textTwo {
@@ -33,10 +32,7 @@
 }
 
 
-
-
 /* animations */
-
 @keyframes color {
     10% {
         background-color: rgb(7, 6, 6);
@@ -55,30 +51,56 @@
     }
 }
 
-
-
-
 /* responsive option*/
-
-
-
-@media screen and (min-width: 1024px){
-    .containerFirstPage{
-        margin-top: 9% !important;
+@media screen and (min-width: 1024px) {
+    .containerFirstPage {
+        margin-top: 2.5% !important;
     }
 }
 
-@media screen and (min-width:328px) , (max-width: 768px){
-    .containerFirstPage{
-        margin-top: 31%;
+@media screen and (min-width:440px),
+(max-width: 768px) {
+    .containerFirstPage {
+        margin-top: 28%;
+    }
+
+    .card-img-top {
+        width: 44%;
+    }
+
+    .textOne {
+        font-size: 9vw;
+    }
+
+    .textTwo {
+        width: 60vw;
+        font-size: 5vw;
+        margin-bottom: 3vw;
     }
 }
 
+@media screen and (max-width: 440px) {
+    .containerFirstPage {
+        margin-top: 23%;
+    }
 
-@media screen and (min-width: 0px) , (max-width: 327px) {
-    .containerFirstPage{
-        margin-top: 40%;
+    .card-img-top {
+        width: 75%;
+    }
+
+    .textOne {
+        font-size: 14vw;
+    }
+
+    .textTwo {
+        width: 65vw;
+        font-size: 7vw;
+        margin-bottom: 6vw;
     }
 }
 
-
+@media screen and (max-width: 325px) {
+    .containerFirstPage {
+        margin-top: 2.5%;
+    }
+}
