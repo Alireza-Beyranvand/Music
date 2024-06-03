@@ -1,0 +1,47 @@
+.container & .row1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.AllContent{
+    margin-top: 8rem;
+}
+
+.PlayerList{
+    display: none;
+    margin-top: .1rem;
+}
+
+.buttonListMusics{
+    display: none;
+    margin-right: -.7rem !important;
+}
+
+.btnClose{
+    margin-left: -1.5rem !important;
+    padding: 0 2vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .row1 {
+        flex-direction: column !important;
+    }
+    .PlayerList {
+        width: 0; 
+        height: 0;
+        border-radius: 2vw;
+       background-color: rgb(68, 21, 199);
+        position: absolute;
+        z-index: 2;
+        right: 3.3vw;
+        transition: all 1s;
+        overflow: hidden;
+        display: inline !important;
+    }
+    .buttonListMusics{
+        display: inline ;
+        padding: 0 1vw;
+        position: relative !important;
+        float: right;
+    }
+}
