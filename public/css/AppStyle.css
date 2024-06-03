@@ -57,10 +57,9 @@
     color: aqua !important;
 }
 
-.fa-play {
+.iconPlay {
     animation: shake infinite 1s;
 }
-
 
 /* animations */
 @keyframes color {

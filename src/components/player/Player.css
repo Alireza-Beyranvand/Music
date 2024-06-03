@@ -1,36 +1,57 @@
 .container & .row1 {
     display: flex;
-    flex-wrap: wrap;
 }
 
-.AllContent{
+.AllContent {
     margin-top: 8rem;
 }
 
-.PlayerList{
-    display: none;
-    margin-top: .1rem;
+.PlayerList {
+    width: 18%;
 }
 
-.buttonListMusics{
+.buttonListMusics {
     display: none;
     margin-right: -.7rem !important;
 }
 
-.btnClose{
-    margin-left: -1.5rem !important;
-    padding: 0 2vw;
+.imgPlayer {
+    width: 100% !important;
+}
+
+.TitlePlayer {
+    text-align: center;
+    text-shadow: 0 0 5px #d1c9c9, 0 0 10px #555454,
+        0 0 25px #414344, 0 0 30px #0073e6;
+    margin: 3.5vw;
+}
+
+.textMusic {
+    width: 50%;
+    height: 30%;
+    text-align: center;
+    margin: auto;
+    word-wrap: break-word;
+    border-radius: 1rem;
+    background-color: rgb(7, 17, 73);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.textMusic::-webkit-scrollbar {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
     .row1 {
         flex-direction: column !important;
     }
+
     .PlayerList {
-        width: 0; 
+        width: 0;
         height: 0;
         border-radius: 2vw;
-       background-color: rgb(68, 21, 199);
+        background-color: rgb(68, 21, 199);
         position: absolute;
         z-index: 2;
         right: 3.3vw;
@@ -38,10 +59,56 @@
         overflow: hidden;
         display: inline !important;
     }
-    .buttonListMusics{
-        display: inline ;
+
+    .buttonListMusics {
+        display: inline;
         padding: 0 1vw;
         position: relative !important;
         float: right;
     }
+
+    .btnClose {
+        display: inline !important;
+        margin-left: -1.5rem !important;
+        padding: 0 2vw;
+    }
+
+    .imgPlayer {
+        margin-top: -1.5rem;
+    }
 }
+
+
+
+
+
+
+
+/* style to music player */
+audio {
+    width: 50%;
+    border-radius: .2rem;
+    
+}
+
+audio::-webkit-media-controls-panel {
+    flex-wrap: wrap;
+    background: none !important;
+    backdrop-filter: blur(50px);
+}
+
+audio::-webkit-media-controls-mute-button {
+    display: none;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    font-size: large;
+    font-family: Merienda, Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 10px #0073e6;
+}
+
+audio::-webkit-media-controls-enclosure{
+   background-color: #9da6ce;
+}
+
+

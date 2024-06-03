@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import img from "../assets/img.jpg"
+import { Button } from "@mui/material";
+
 
 const FirstPage = () => {
 
@@ -13,7 +15,7 @@ const FirstPage = () => {
                         <h5 className="card-title text-center text-white textOne mt-2 Scroll">Moein</h5>
                         <p className="card-text text-center text-white textTwo Scroll">The Best Musics</p>
                         <p className="card-text text-center">
-                            <Link to="" className="btn btn-secondary shadow mt-3 mb-3 btnGo Scroll" >Go To Player &nbsp;<i className="fa fa-play" ></i></Link>
+                            <Link to="" className="btn btn-secondary shadow mt-3 mb-3 btnGo Scroll" >Go To Player &nbsp;<i className="fa fa-play iconPlay" ></i></Link>
                         </p>
                     </div>
                 </div>
