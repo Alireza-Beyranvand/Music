@@ -15,7 +15,7 @@ const FirstPage = () => {
                         <h5 className="card-title text-center text-white textOne mt-2 Scroll">Moein</h5>
                         <p className="card-text text-center text-white textTwo Scroll">The Best Musics</p>
                         <p className="card-text text-center">
-                            <Link to="" className="btn btn-secondary shadow mt-3 mb-3 btnGo Scroll" >Go To Player &nbsp;<i className="fa fa-play iconPlay" ></i></Link>
+                            <Link to="/player" className="btn btn-secondary shadow mt-3 mb-3 btnGo Scroll" >Go To Player &nbsp;<i className="fa fa-play iconPlay" ></i></Link>
                         </p>
                     </div>
                 </div>

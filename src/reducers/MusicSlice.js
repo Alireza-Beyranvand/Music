@@ -1,7 +1,7 @@
 
 
 import { createAsyncThunk , createSlice } from "@reduxjs/toolkit";
-import { AllMusic } from "../services/servicesMusic";
+import { AllAllbum, AllMusic } from "../services/servicesMusic";
 
 
 
@@ -9,11 +9,15 @@ export const fetchMusics = createAsyncThunk("music/fetchMusics" , async () => {
     const respons = await AllMusic();
     return respons.data;
 })
-
+export const fetchAllbum = createAsyncThunk("music/fetchAllbum" , async () => {
+    const respons = await AllAllbum();
+    return respons.data;
+} )
 
 
 const state = {
     musics : [] ,
+    allbum : [] ,
     status : "none" ,
     error : ""
 }
@@ -38,6 +42,17 @@ const musicSlice = createSlice({
             state.status = "failed";
             state.error = action.error.message;
         })
+        .addCase(fetchAllbum.pending , (state , action) => {
+            state.status = "loading";
+        })
+        .addCase(fetchAllbum.fulfilled , (state , action) => {
+            state.status = "completed";
+            state.allbum = action.payload;
+        })
+        .addCase(fetchAllbum.rejected , (state , action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        })
     }
 });
 
@@ -45,6 +60,7 @@ const musicSlice = createSlice({
 
 //selectors
 export const selectAllMusics = state => state.musics.musics;
+export const selectAllAllbumes = state => state.musics.allbum;
 export const selectStatusLoading = state => state.musics.status;
 
 

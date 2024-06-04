@@ -29,7 +29,7 @@
     background-color: #1b1b1d;
     box-shadow: 2px -2px 7px rgb(0, 0, 0), -2px -2px 5px rgb(8, 8, 8), 1px 1px 20px rgb(0, 0, 0);
     padding: 1rem;
-    overflow-y: scroll;
+    overflow :hidden;
 }
 
 
@@ -125,7 +125,24 @@
 
 
 
+/* list musics & filders */
+.PlayListContainerFolder{
+    height: 12.5vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.PlayListContainerFolder::-webkit-scrollbar{
+    display: none;
+}
 
+.PlayListContentMusics{
+    height: 12.5vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.PlayListContentMusics::-webkit-scrollbar{
+    display: none;
+}
 
 
 

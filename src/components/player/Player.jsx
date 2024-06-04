@@ -4,14 +4,32 @@ import ms from "../../assets/Instrumental-effect1.mp3"
 import "./Player.css"
 import { useImmer } from "use-immer";
 import img from "../../assets/img.jpg";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import MusicFolder from "../musicFolder/MusicFolder";
 
-import { selectAllMusics, selectStatusLoading } from "../../reducers/MusicSlice";
+import { selectAllMusics, selectStatusLoading , selectAllAllbumes, fetchAllbum } from "../../reducers/MusicSlice";
+import { fetchMusics } from "../../reducers/MusicSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { Outlet } from "react-router-dom";
 
 
 const Player = () => {
+
+
+    const status = useSelector(selectStatusLoading);
+    const Allmusics = useSelector(selectAllMusics);
+    const AllAllbumes = useSelector(selectAllAllbumes);
+
+    const Dispatch = useDispatch()
+
+
+    useEffect(() => {
+        if (status === "none") {
+            Dispatch(fetchMusics());
+            Dispatch(fetchAllbum())
+        }
+    }, [])
+
 
 
 
@@ -60,6 +78,12 @@ const Player = () => {
             audio.current.volume -= 0.1;
         }
     };
+
+
+
+
+
+
 
 
 
@@ -139,11 +163,14 @@ const Player = () => {
                                     </div>
 
                                     <div className=" row PlayListContent " >
-                                        <div className="col PlayListContainerFolder mt-2 p-1 text-start border rounded-2" >
-                                            <MusicFolder />
+                                        <div className="col PlayListContainerFolder mt-2 p-1 text-start border rounded-3" >
+                                        {
+                                            AllAllbumes? (AllAllbumes.map((allbums) => 
+                                            <MusicFolder  allbums={allbums} />)) : (<h1>Not Found !</h1>)
+                                        }
                                         </div>
                                         <div className=" col-8 PlayListContentMusics mt-2 p-1 border rounded-3">
-                                            music
+                                            <Outlet/>
                                         </div>
                                     </div>
 

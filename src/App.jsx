@@ -9,9 +9,9 @@ const App = () => {
     <>
       <div className="App" >
 
-        {/* <FirstPage/> */}
-        <Player/>
-        <Outlet />
+        <FirstPage/>
+        {/* <Player/> */}
+        {/* <Outlet /> */}
 
 
       </div>
