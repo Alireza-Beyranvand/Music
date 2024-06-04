@@ -1,6 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
-import FirstPage from "./components/FirstPage";
-import "../public/css/AppStyle.css";
+import FirstPage from "./components/firstPage/FirstPage";
 import Player from "./components/player/Player";
 const App = () => {
 

@@ -5,23 +5,28 @@ import "./Player.css"
 import { useImmer } from "use-immer";
 import img from "../../assets/img.jpg";
 import { useRef } from "react";
+import MusicFolder from "../musicFolder/MusicFolder";
+
+import { selectAllMusics, selectStatusLoading } from "../../reducers/MusicSlice";
+import { useSelector, useDispatch } from "react-redux";
+
+
 const Player = () => {
 
-
-    const but1 = useRef()
-    const but2 = useRef()
 
 
     const [openList, setOpenList] = useImmer(false)
 
-
+    // open drawer
     const OpenDrawer = () => {
         setOpenList((draft) => !draft)
     }
 
+    // musics url
     const music = new Audio(ms)
 
-
+    const but1 = useRef()
+    const but2 = useRef()
 
 
     const Playmusic = () => {
@@ -55,6 +60,10 @@ const Player = () => {
             audio.current.volume -= 0.1;
         }
     };
+
+
+
+
 
     return (
         <>
@@ -131,10 +140,10 @@ const Player = () => {
 
                                     <div className=" row PlayListContent " >
                                         <div className="col PlayListContainerFolder mt-2 p-1 text-start border rounded-2" >
-                                            ff
+                                            <MusicFolder />
                                         </div>
                                         <div className=" col-8 PlayListContentMusics mt-2 p-1 border rounded-3">
-                                            {}
+                                            music
                                         </div>
                                     </div>
 
