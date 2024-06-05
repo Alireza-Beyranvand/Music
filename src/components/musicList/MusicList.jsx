@@ -2,39 +2,38 @@
 import "./MusicsList.css"
 
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectAllMusics } from "../../reducers/MusicSlice";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
+import { MusicFiltered } from "../../reducers/MusicSlice";
+import { fetchMusics } from "../../reducers/MusicSlice";
+import { selectFilteredMusics } from "../../reducers/MusicSlice";
+
 
 const MusicList = () => {
 
-    const [musics , setMusics] = useState([])
-
+    const Dispatch = useDispatch()
     const Id = useParams()
-    const AllMusics = useSelector(selectAllMusics)
+    const AllbumId = Id.AllbumId.toString()
+    const FiltredMusics = useSelector(selectFilteredMusics)
 
-console.log(AllMusics)
-useEffect(() => {
-const filtered = AllMusics.find((musics) => musics.allbum === Id.AllbumId.toString())
-console.log(filtered)
-setMusics(filtered)
-},[])
-
-
+    useEffect(() => {
+        Dispatch(MusicFiltered(AllbumId))
+    }, [Id])
 
     return (
         <>
-
-            <div className="musics" >
-                <div className="card cardF" >
-                    <div className="card-body cardList p-1 bg-dark text-white" >
-                       {musics.length > 0 ? (musics.map((music) => <div key={music.id} >{music.name}</div>)) : (<h1>not found</h1>)}
+            {FiltredMusics.length >= 0 ? (FiltredMusics.map((music) => (
+                <div key={music.id} className="musics" >
+                    <div className="card cardF" >
+                        <div className="card-body cardList p-1 bg-dark text-white" >
+                            {music.name}
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            ))) : (<h1 className="mt-4">Select Allbume</h1>)}
         </>
     )
 };
 
 export default MusicList;
+
