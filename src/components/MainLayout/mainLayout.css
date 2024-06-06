@@ -1,8 +1,8 @@
 /* AllContents */
 .AllContent {
+    height: 35rem;
     margin-top: 4.2rem;
     backdrop-filter: blur(100px);
-    height: 35rem;
 }
 
 
@@ -10,6 +10,7 @@
 .container & .row1 {
     display: flex;
 }
+
 .container {
     margin-top: 4.5em;
 }
@@ -18,25 +19,24 @@
 /* player list */
 .PlayerList {
     width: 100%;
-    height: 1rem !important;
     margin-top: 1.8rem;
 }
 
 .containerPlayList {
     height: 15.7vw;
-    border: 1px solid rgb(156, 156, 147) !important;
+    border: 1px solid rgb(156, 156, 147);
     border-radius: .5rem;
     background-color: #1b1b1d;
     box-shadow: 2px -2px 7px rgb(0, 0, 0), -2px -2px 5px rgb(8, 8, 8), 1px 1px 20px rgb(0, 0, 0);
     padding: 1rem;
-    overflow :hidden;
+    overflow: hidden;
 }
 
 
 
 
-.titleListMusic{
-    margin: -1rem -1rem 0 -1rem ;
+.titleListMusic {
+    margin: -1rem -1rem 0 -1rem;
     background-color: #0c0c0f;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .TitlePlayer {
-    text-shadow: 0 0 5px #d1c9c9 , 0 0 10px #555454 , 0 0 25px #414344 , 0 0 30px #0073e6;
+    text-shadow: 0 0 5px #d1c9c9, 0 0 10px #555454, 0 0 25px #414344, 0 0 30px #0073e6;
     text-align: center;
     margin: 2.6vw;
 }
@@ -105,6 +105,7 @@
     background: #1056b1 !important;
     border-radius: .2rem;
 }
+
 .textMusic::-webkit-scrollbar-track {
     box-shadow: inset 0px -1px 13px #545468 !important;
     border-radius: 10px;
@@ -126,21 +127,23 @@
 
 
 /* list musics & filders */
-.PlayListContainerFolder{
+.PlayListContainerFolder {
     height: 12.5vw;
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.PlayListContainerFolder::-webkit-scrollbar{
+
+.PlayListContainerFolder::-webkit-scrollbar {
     display: none;
 }
 
-.PlayListContentMusics{
+.PlayListContentMusics {
     height: 12.5vw;
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.PlayListContentMusics::-webkit-scrollbar{
+
+.PlayListContentMusics::-webkit-scrollbar {
     display: none;
 }
 
@@ -148,6 +151,13 @@
 
 /* responsive */
 @media only screen and (max-width: 768px) {
+    .AllContent {
+        height: 45rem;
+        margin-top: 1rem !important;
+        backdrop-filter: blur(100px);
+
+    }
+
     .container {
         margin-top: 2em;
     }
@@ -155,6 +165,45 @@
     .row1 {
         flex-direction: column !important;
     }
+
+    .imgPlayer {
+        width: 80% !important;
+        margin: auto !important;
+        margin-right: 0 !important;
+        margin-left: 2.3rem !important;
+        margin-top: -.8rem !important;
+    }
+
+
+    .box2 {
+        width: 100vw;
+        height: 10rem !important;
+        margin-top: 1.8rem;
+        height: 50vw !important;
+    }
+
+    .TitlePlayer {
+        text-shadow: 0 0 5px #d1c9c9, 0 0 10px #555454, 0 0 25px #414344, 0 0 30px #0073e6;
+        text-align: center;
+        margin: 2.6vw;
+    }
+
+    .textMusic {
+        width: 100%;
+        height: 40% !important;
+    }
+
+    .textContent {
+        width: 100%;
+
+    }
+
+    .footerTitle {
+        margin: 1rem 0 !important;
+    }
+
+
+
 
     .PlayerList {
         width: 0;
@@ -167,31 +216,30 @@
         right: 3.3vw;
         transition: all 1s;
         overflow: hidden;
-        display: inline !important;
     }
 
     .containerPlayList {
-        height: 65vw;
-        margin-top: 1rem;
-        margin: .5rem;
+        height: 42vw;
     }
-
-
+    
+    .PlayListContainerFolder {
+        height: 6.7rem;
+ 
+    }
+    .PlayListContentMusics {
+        height: 6.7rem;
+    }
 
     .buttonListMusics {
         display: inline;
         padding: 0 1vw;
-        margin-right: 0rem !important;
+        margin-right: -1rem !important;
         position: relative !important;
         float: right;
         border-radius: .2rem !important;
     }
 
-    .btnClose {
-        width: 30%;
-        display: inline !important;
-        margin-left: -.8rem !important;
-    }
+
 
     .imgPlayer {
         margin-top: -1.5rem;
@@ -200,8 +248,13 @@
     .boxControl {
         width: 100%;
         padding: 1em !important;
+        margin-top: 1.5rem;
         border-radius: 1rem !important;
         backdrop-filter: blur(200px);
+        background-color: #2e3031;
+        box-shadow: 1px 1px 10px rgb(7, 170, 211);
+        margin-left: .2rem;
+
     }
 
 }

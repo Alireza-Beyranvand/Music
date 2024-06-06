@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import Player from "../components/player/Player";
+import MainLayout from "../components/MainLayout/MainLayout";
 import MusicList from "../components/musicList/MusicList";
+import PlayerBox from "../components/playerBox/PlayerBox";
 
 
 
@@ -13,14 +14,19 @@ export const RouterPlayer = createBrowserRouter([
     },
 
     {
-        path: "/player",
-        element: <Player />,
+        path: "/MainLayout",
+        element: <MainLayout/>,
         children : [
             {
-                path : "/player/musics/:AllbumId" ,
+                path : "/MainLayout/musics/:AllbumId" ,
                 element : <MusicList/>
+            } ,
+            {
+                path : "/MainLayout/musics/:AllbumId/playerBox" ,
+                element : <PlayerBox/>
             }
         ]
-    }
+    } 
+
 ]);
 

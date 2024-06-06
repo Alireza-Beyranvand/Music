@@ -1,5 +1,5 @@
 
-
+import "../MainLayout/mainLayout.css"
 
 const TitleMusics = () => {
     return (
@@ -20,7 +20,7 @@ const TitleMusics = () => {
                         asfoindafbpoknafdrson
                     </p>
                 </p>
-                <h5 className="text-center text-white mt-5">1980 - paricher</h5>
+                <h5 className="text-center text-white mt-5 footerTitle">1980 - paricher</h5>
             </div>
 
         </>

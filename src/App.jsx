@@ -1,18 +1,20 @@
 import { Outlet, useLocation } from "react-router-dom";
 import FirstPage from "./components/firstPage/FirstPage";
-import Player from "./components/player/Player";
+
+import { useEffect } from "react";
+
 const App = () => {
 
-  const Location = useLocation()
+useEffect(() => {
+  toast("Wow so easy!")
+})
 
   return (
     <>
       <div className="App" >
-
         <FirstPage/>
         {/* <Player/> */}
         {/* <Outlet /> */}
-
 
       </div>
 
