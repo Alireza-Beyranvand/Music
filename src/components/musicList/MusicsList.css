@@ -1,13 +1,16 @@
-
-.musics{
+.musics {
     border-radius: 5rem !important;
 }
 
-.cardF{
+.cardF {
     border: none !important;
     border-bottom: 1px solid silver !important;
 }
 
-.cardList:hover{
+.cardList:hover {
     background-color: rgb(77, 77, 72) !important;
+}
+
+.playIcon{
+    opacity: 0;
 }
