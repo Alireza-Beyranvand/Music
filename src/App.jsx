@@ -5,9 +5,6 @@ import { useEffect } from "react";
 
 const App = () => {
 
-useEffect(() => {
-  toast("Wow so easy!")
-})
 
   return (
     <>

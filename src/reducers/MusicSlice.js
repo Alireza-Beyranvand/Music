@@ -20,7 +20,6 @@ const state = {
     allbum: [],
     filtredMusics: [],
     play: {},
-    playStatus: "pause",
     status: "none",
     error: ""
 }
@@ -43,10 +42,6 @@ const musicSlice = createSlice({
             if (filtredForPlay) {
                 state.play = filtredForPlay
             }
-        },
-        musicPaused: (state, action) => {
-            const status = action.payload;
-            state.playStatus = status;
         }
     },
     extraReducers: builder => {
@@ -84,8 +79,6 @@ export const selectAllAllbumes = state => state.musics.allbum;
 export const selectStatusLoading = state => state.musics.status;
 export const selectFilteredMusics = state => state.musics.filtredMusics;
 export const selectFilteredPlayedMusic = state => state.musics.play;
-export const selectPlayedStatus = state => state.musics.playStatus;
-
 
 // actions 
 export const { MusicFiltered, MusicPlayed , musicPaused } = musicSlice.actions
