@@ -34,12 +34,11 @@ const MusicList = () => {
 
     // showe nameAllbum in MusicList
     const ShowAllbum = (Id) => {
-        const filtered = AllAlbumes.filter((filter) => filter.id === Id)
+        const filtered = AllAlbumes.filter((filter) => filter.id === AllbumId)
         return (
-            filtered[0].nameAllbum
+            filtered[0]
         )
     }
-
 
     // set Icon playing and change backgtound
     const ChangeClassNameForPlay = (musicId) => {
@@ -76,8 +75,8 @@ const MusicList = () => {
                             onClick={() => sendToPlayBox(music.id)} >
                             <div className="row">
                                 <div className="col text-start mx-2" >{music.name}</div>
-                                <div className="col dateText "  >{music.date}</div>
-                                <cite className="col">{ShowAllbum(music.id)}</cite>
+                                <div className="col dateText "  >{ShowAllbum(music.id).date}</div>
+                                <cite className="col">{ShowAllbum(music.id).nameAllbum}</cite>
                                 <small className="col-1 playIcon" style={ChangeStyleForIcone(music.id)}>
                                     <i className="fa fa-play fa-animaion" />
                                     <i className="fa fa-music fa-animaion" />

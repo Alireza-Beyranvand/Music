@@ -16,14 +16,6 @@
     margin-top: 4.5em;
 }
 
-/* img */
-.imgPlayer {
-    width: 95% !important;
-    border-radius: 1.5rem;
-    margin-top: -3rem;
-    margin-left: -.5rem;
-    box-shadow: 2px 2px 19px rgb(0, 0, 0), -2px -2px 5px rgb(71, 70, 70), 1px 1px 1px rgb(0, 0, 0);
-}
 
 
 /* responsive */

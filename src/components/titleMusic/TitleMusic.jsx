@@ -36,7 +36,7 @@ const TitleMusics = () => {
                         {ReadyPlayingText()}
                     </p>
                 </p>
-                <h4 className="text-center text-white my-3 footerTitle">
+                <h4 className="text-center text-white my-3 mt-4 footerTitle">
                     {ReadyPlayingFolderName()}</h4>
             </div>
 

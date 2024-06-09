@@ -1,13 +1,14 @@
 
 import "./mainLayout.css"
-import img from "../../assets/img.jpg";
+
 import { useImmer } from "use-immer";
 import { useEffect } from "react";
-import { selectStatusLoading, fetchAllbum, fetchMusics } from "../../reducers/MusicSlice";
+import { selectStatusLoading, fetchAllbum, fetchMusics} from "../../reducers/MusicSlice";
 import { useSelector, useDispatch } from "react-redux";
 import PlayerBox from "../playerBox/PlayerBox";
 import TitleMusics from "../titleMusic/TitleMusic";
 import PlayList from "../playList/PlayList";
+import ImagePlaying from "../titleMusic/imagePlaying/ImagePlaying"; 
 import { ToastContainer } from "react-toastify";
 
 
@@ -24,10 +25,12 @@ const MainLayout = () => {
     }
 
 
-
+// initialize Dispatch
     const Dispatch = useDispatch()
-    const status = useSelector(selectStatusLoading);
 
+
+    // status when ReadyPage
+    const status = useSelector(selectStatusLoading);
 
     useEffect(() => {
         if (status === "none") {
@@ -35,7 +38,6 @@ const MainLayout = () => {
             Dispatch(fetchAllbum())
         }
     }, [])
-
 
 
     return (
@@ -51,7 +53,7 @@ const MainLayout = () => {
                                 <div className="col box text-white" >
                                     <button className=" btn btn-secondary buttonListMusics"
                                         onClick={OpenDrawer} > <i className="fa fa-bars" ></i></button>
-                                    <img src={img} alt="Moein" className="imgPlayer" />
+                                      <ImagePlaying />
                                 </div>
                                 <TitleMusics />
                             </div>
