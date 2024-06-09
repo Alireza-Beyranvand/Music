@@ -10,7 +10,21 @@ const TitleMusics = () => {
 
     const setPlayingMusic = useSelector(selectFilteredPlayedMusic);
 
+    const ReadyPlayingText = () => {
+        if (setPlayingMusic.length >= 0 && setPlayingMusic[0]) {
+            return setPlayingMusic[0].text
+        } else {
+            return <h3>select Music</h3>
+        }
+    }
 
+    const ReadyPlayingFolderName = () => {
+        if (setPlayingMusic.length >= 0 && setPlayingMusic[0]) {
+            return setPlayingMusic[0].name
+        } else {
+            return <h3>select Music</h3>
+        }
+    }
 
     return (
         <>
@@ -19,10 +33,11 @@ const TitleMusics = () => {
                 <h2 className=" TitlePlayer text-white mt-3 mb-3">Moein</h2>
                 <p className="textMusic text-white" >
                     <p className="textContent">
-                        {setPlayingMusic.length >= 0 ? setPlayingMusic[0].text : (<h3>select Music</h3>)}
+                        {ReadyPlayingText()}
                     </p>
                 </p>
-                <h5 className="text-center text-white mt-4 footerTitle">1980 - paricher</h5>
+                <h4 className="text-center text-white my-3 footerTitle">
+                    {ReadyPlayingFolderName()}</h4>
             </div>
 
         </>
