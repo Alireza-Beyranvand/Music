@@ -1,30 +1,27 @@
-import { useImmer } from "use-immer";
-import { useSelector, useDispatch } from "react-redux";
-import { selectStatusLoading, selectAllAllbumes, fetchAllbum, fetchMusics } from "../../reducers/MusicSlice";
-import { Outlet } from "react-router-dom";
 
-import "../MainLayout/mainLayout.css"
+import "./playList.css";
 
-import img from "../../assets/img.jpg";
-import { useEffect } from "react";
-import MusicFolder from "../musicFolder/MusicFolder";
+import { useSelector } from "react-redux";
+import { selectAllAllbumes } from "../../reducers/MusicSlice";
+import { Outlet, useLocation } from "react-router-dom";
+import MusicFolder from "../playList/musicFolder/MusicFolder";
 
 
 
+const PlayList = ({ openList }) => {
 
-const PlayList = ({openList}) => {
+    const Location = useLocation();
 
-
+    // selector
     const AllAllbumes = useSelector(selectAllAllbumes);
 
-console.log(openList)
 
+    // open and close drawer playList
     const StyleDrawer = () => {
         if (openList) {
-            return { width: "90%", height: "24%" } 
-        }
-    }
-
+            return { width: "90%", height: "24%" };
+        };
+    };
 
     // View AllAllbum
     const AllbumList = () => {
@@ -36,13 +33,10 @@ console.log(openList)
                 }
             </>
         )
-    }
-
-
+    };
 
     return (
         <>
-
             <div className="col-3 PlayerList" style={StyleDrawer()}>
                 <div className="col " >
                     <div className="row" >
@@ -59,7 +53,7 @@ console.log(openList)
                                     {AllbumList()}
                                 </div>
                                 <div className=" col-8 PlayListContentMusics mt-2 p-1 border rounded-3">
-                                    <Outlet />
+                                 {Location.pathname === "/MainLayout" ? (<h2 className="mt-5"> <i className="fa fa-arrow-left"/>  Select Folder</h2>) : (<Outlet/>)}   
                                 </div>
                             </div>
                         </div>

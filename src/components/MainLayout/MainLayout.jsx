@@ -8,12 +8,12 @@ import { useSelector, useDispatch } from "react-redux";
 import PlayerBox from "../playerBox/PlayerBox";
 import TitleMusics from "../titleMusic/TitleMusic";
 import PlayList from "../playList/PlayList";
-import { useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+
+
 
 const MainLayout = () => {
 
-    const Location = useLocation();
 
     const [openList, setOpenList] = useImmer(false)
 
@@ -40,9 +40,9 @@ const MainLayout = () => {
 
     return (
         <>
-            <ToastContainer position="top-right" 
-            autoClose={3000} hideProgressBar={false} newestOnTopfalse
-            closeOnClick draggable />
+            <ToastContainer position="top-right"
+                autoClose={3000} hideProgressBar={false} newestOnTopfalse
+                closeOnClick draggable />
             <div className="container AllContent" >
                 <div className="row" >
                     <div className="col">

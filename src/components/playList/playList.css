@@ -1,0 +1,51 @@
+/* list musics & filders */
+.PlayListContainerFolder {
+    height: 12.5vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.PlayListContainerFolder::-webkit-scrollbar {
+    display: none;
+}
+
+.PlayListContentMusics {
+    height: 12.5vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.PlayListContentMusics::-webkit-scrollbar {
+    display: none;
+}
+
+/* player list */
+.PlayerList {
+    width: 100%;
+    margin-top: 1.8rem;
+}
+
+.containerPlayList {
+    height: 15.7vw;
+    border: 1px solid rgb(156, 156, 147);
+    border-radius: .5rem;
+    background-color: #1b1b1d;
+    box-shadow: 2px -2px 7px rgb(0, 0, 0), -2px -2px 5px rgb(8, 8, 8), 1px 1px 20px rgb(0, 0, 0);
+    padding: 1rem;
+    overflow: hidden;
+}
+
+
+
+.titleListMusic {
+    margin: -1rem -1rem 0 -1rem;
+    background-color: #0c0c0f;
+}
+
+.containerPlayList::-webkit-scrollbar {
+    display: none;
+}
+
+.buttonListMusics {
+    display: none;
+}

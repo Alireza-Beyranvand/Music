@@ -1,15 +1,15 @@
 
-
-import { Link, useLocation } from "react-router-dom";
 import "./MusicsFolder.css"
+import { Link} from "react-router-dom";
+
 
 
 
 const MusicFolder = ({ allbums }) => {
 
-    const Location = useLocation()
-    const AllbumId = allbums.id
 
+    // initialize allbumId
+    const AllbumId = allbums.id
 
 
     return (

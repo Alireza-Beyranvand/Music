@@ -1,7 +1,7 @@
 import "../playerBox/playerBox.css";
 import { useEffect, useState } from "react";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectFilteredPlayedMusic } from "../../reducers/MusicSlice";
 
 
@@ -13,9 +13,6 @@ const PlayerBox = () => {
     // musics for playing
     const musicsForPlay = useSelector(selectFilteredPlayedMusic)
 
-
-console.log(musics)
-
     useEffect(() => {
 
         if (musicsForPlay.length >= 0) {
@@ -23,13 +20,9 @@ console.log(musics)
         }
     }, [musicsForPlay])
 
-
-
-
     return (
-  
         <>
-           <audio autoPlay controls src={musics} />
+            <audio autoPlay controls src={musics} />
         </>
     )
 };

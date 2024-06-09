@@ -5,7 +5,6 @@
     backdrop-filter: blur(100px);
 }
 
-
 /* containers */
 .container & .row1 {
     display: flex;
@@ -15,40 +14,6 @@
     margin-top: 4.5em;
 }
 
-
-/* player list */
-.PlayerList {
-    width: 100%;
-    margin-top: 1.8rem;
-}
-
-.containerPlayList {
-    height: 15.7vw;
-    border: 1px solid rgb(156, 156, 147);
-    border-radius: .5rem;
-    background-color: #1b1b1d;
-    box-shadow: 2px -2px 7px rgb(0, 0, 0), -2px -2px 5px rgb(8, 8, 8), 1px 1px 20px rgb(0, 0, 0);
-    padding: 1rem;
-    overflow: hidden;
-}
-
-
-
-
-.titleListMusic {
-    margin: -1rem -1rem 0 -1rem;
-    background-color: #0c0c0f;
-}
-
-.containerPlayList::-webkit-scrollbar {
-    display: none;
-}
-
-.buttonListMusics {
-    display: none;
-}
-
-
 /* img */
 .imgPlayer {
     width: 95% !important;
@@ -57,96 +22,6 @@
     margin-left: -.5rem;
     box-shadow: 2px 2px 19px rgb(0, 0, 0), -2px -2px 5px rgb(71, 70, 70), 1px 1px 1px rgb(0, 0, 0);
 }
-
-
-
-/*box Title Music*/
-.box2 {
-    width: 100vw;
-    border-radius: 0 1rem 0 1rem;
-    margin-top: -2.7rem;
-    box-shadow: 1px 1px 20px rgb(8, 10, 10), -1px -1px 10px rgb(54, 49, 49),
-        3px 3px 50px rgb(31, 36, 37);
-}
-
-.TitlePlayer {
-    text-shadow: 0 0 5px #d1c9c9, 0 0 10px #555454, 0 0 25px #414344, 0 0 30px #0073e6;
-    text-align: center;
-    margin: 2.6vw;
-}
-
-/* text Music */
-.textMusic {
-    width: 50%;
-    height: 40%;
-    text-align: center;
-    margin: auto;
-    word-wrap: break-word;
-    border-radius: .5rem;
-    background-color: rgb(7, 17, 73);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    word-break: break-all;
-}
-
-/* text content */
-.textContent {
-    padding: 0 .5rem;
-    border-radius: .3rem;
-}
-
-.textMusic::-webkit-scrollbar {
-    width: .5rem;
-    background-color: #cedbe8;
-    border-radius: 1rem;
-}
-
-.textMusic::-webkit-scrollbar-thumb {
-    background: #1056b1 !important;
-    border-radius: .2rem;
-}
-
-.textMusic::-webkit-scrollbar-track {
-    box-shadow: inset 0px -1px 13px #545468 !important;
-    border-radius: 10px;
-}
-
-
-
-
-
-/* player music box */
-.boxControl {
-    margin-top: 2rem;
-    width: 70%;
-    padding: 1rem;
-    border-radius: 50rem;
-    box-shadow: 1px 1px 20px rgb(7, 170, 211);
-}
-
-
-
-/* list musics & filders */
-.PlayListContainerFolder {
-    height: 12.5vw;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.PlayListContainerFolder::-webkit-scrollbar {
-    display: none;
-}
-
-.PlayListContentMusics {
-    height: 12.5vw;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.PlayListContentMusics::-webkit-scrollbar {
-    display: none;
-}
-
 
 
 /* responsive */
