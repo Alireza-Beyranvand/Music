@@ -20,6 +20,7 @@ const state = {
     allbum: [],
     filtredMusics: [],
     play: {},
+    statusPlay: "pause",
     status: "none",
     error: ""
 }
@@ -41,6 +42,12 @@ const musicSlice = createSlice({
             const filtredForPlay = state.filtredMusics.filter((music) => music.id === MusicId)
             if (filtredForPlay) {
                 state.play = filtredForPlay
+            }
+        },
+        MusicStatusPlayChanged: (state, action) => {
+            const NewStatus = action.payload;
+            if (NewStatus) {
+                state.statusPlay = NewStatus
             }
         }
     },
@@ -79,9 +86,10 @@ export const selectAllAllbumes = state => state.musics.allbum;
 export const selectStatusLoading = state => state.musics.status;
 export const selectFilteredMusics = state => state.musics.filtredMusics;
 export const selectFilteredPlayedMusic = state => state.musics.play;
+export const selectStatusPlay = state => state.musics.statusPlay;
 
 // actions 
-export const { MusicFiltered, MusicPlayed , musicPaused } = musicSlice.actions
+export const { MusicFiltered, MusicPlayed, MusicStatusPlayChanged } = musicSlice.actions
 
 
 

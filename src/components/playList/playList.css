@@ -49,3 +49,22 @@
 .buttonListMusics {
     display: none;
 }
+
+
+@media screen and (max-width: 940px) {
+    .containerPlayList {
+        height: 20vw;
+    }
+
+    .PlayListContainerFolder {
+        height: 15.6vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .PlayListContentMusics {
+        height: 15.6vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}

@@ -1,9 +1,9 @@
 /* AllContents */
 .AllContent {
-    height: 35rem;
+    height: 35.5rem;
     margin-top: 4.2rem;
     backdrop-filter: blur(100px);
-    box-shadow: 2px 2px 20px rgb(2, 2, 2) , -2px -2px 10px rgb(0, 0, 0);
+    box-shadow: 2px 2px 20px rgb(2, 2, 2), -2px -2px 10px rgb(0, 0, 0);
     border-radius: 1rem;
 }
 
@@ -15,6 +15,15 @@
 .container {
     margin-top: 4.5em;
 }
+
+
+
+@media screen and (max-width: 940px) {
+    .AllContent {
+        margin-top: 12rem;
+    }
+}
+
 
 
 
@@ -90,11 +99,12 @@
     .containerPlayList {
         height: 42vw;
     }
-    
+
     .PlayListContainerFolder {
         height: 6.7rem;
- 
+
     }
+
     .PlayListContentMusics {
         height: 6.7rem;
     }
@@ -127,8 +137,3 @@
     }
 
 }
-
-
-
-
-

@@ -18,16 +18,16 @@ const ImagePlaying = () => {
             const allbumIdPlaying = playing[0].allbum;
             const filteredImg = AllAlbume.filter((allbum) => allbum.id === allbumIdPlaying);
             const readyImg =  filteredImg[0].img;
-            return readyImg;
+            return (<img src={readyImg}  alt="Moein" className="imgPlayer" />);
         } else {
-            return img;
+            return (<img src={img}  alt="Moein" className="imgPlayerFirst" />);
         }
     };
 
 
     return (
         <div>
-            <img src={imgMusicPlaying()}  alt="Moein" className="imgPlayer" />
+            {imgMusicPlaying()}
         </div>
     )
 }

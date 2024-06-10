@@ -1,6 +1,5 @@
 /*box Title Music*/
 .box2 {
-    width: 100vw;
     border-radius: 0 1rem 0 1rem;
     margin-top: -2.7rem;
     box-shadow: 1px 1px 20px rgb(8, 10, 10), -1px -1px 10px rgb(54, 49, 49),
@@ -54,4 +53,28 @@ text-shadow: 1px .5px 10px rgb(23, 193, 223);
 .textMusic::-webkit-scrollbar-track {
     box-shadow: inset 0px -1px 13px #545468 !important;
     border-radius: 10px;
+}
+
+
+
+
+@media screen and (max-width: 1024px) , (min-width : 768) {
+
+/* text Music */
+.textMusic {
+    width: 25vw;
+    height: 8rem;
+    padding: .9rem;
+    text-align: center;
+    margin: auto;
+    border-radius: .5rem;
+    background-color: rgb(35, 37, 48);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+.textContent{
+    margin-top: -.5rem;
+}
+
 }

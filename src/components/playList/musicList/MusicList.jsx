@@ -4,7 +4,7 @@ import "./MusicsList.css"
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { MusicFiltered, selectAllAllbumes, selectFilteredPlayedMusic } from "../../../reducers/MusicSlice";
+import { MusicFiltered, MusicStatusPlayChanged, selectAllAllbumes, selectFilteredPlayedMusic, selectStatusPlay } from "../../../reducers/MusicSlice";
 import { selectFilteredMusics } from "../../../reducers/MusicSlice";
 import { MusicPlayed } from "../../../reducers/MusicSlice";
 
@@ -24,7 +24,7 @@ const MusicList = () => {
     const FiltredMusics = useSelector(selectFilteredMusics);
     const playingMusic = useSelector(selectFilteredPlayedMusic)
     const AllAlbumes = useSelector(selectAllAllbumes)
-
+    const StatusPlay = useSelector(selectStatusPlay)
 
     // recived Allmusic form server
     useEffect(() => {
@@ -50,8 +50,9 @@ const MusicList = () => {
         }
     }
 
+    // Conditions style play icone
     const ChangeStyleForIcone = (musicId) => {
-        if (playingMusic.length >= 0 && musicId === playingMusic[0].id) {
+        if (playingMusic.length >= 0 && musicId === playingMusic[0].id && StatusPlay === "play") {
             return { opacity: "1" }
         } else {
             return null
@@ -59,9 +60,10 @@ const MusicList = () => {
     }
 
 
-    // send music to PlayerBox by Dispatch 
+    // send music to PlayerBox by Dispatch and Display Play Icone
     const sendToPlayBox = (musicId) => {
         Dispatch(MusicPlayed(musicId))
+        Dispatch(MusicStatusPlayChanged("play"))
     }
 
 

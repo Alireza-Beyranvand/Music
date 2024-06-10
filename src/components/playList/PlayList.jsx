@@ -10,6 +10,8 @@ import MusicFolder from "../playList/musicFolder/MusicFolder";
 
 const PlayList = ({ openList }) => {
 
+    
+    // initialize useLocation
     const Location = useLocation();
 
     // selector

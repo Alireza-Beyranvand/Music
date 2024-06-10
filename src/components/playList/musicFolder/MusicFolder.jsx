@@ -11,7 +11,6 @@ const MusicFolder = ({ allbums }) => {
     // initialize allbumId
     const AllbumId = allbums.id
 
-
     return (
         <>
             <div className="allbums" >
