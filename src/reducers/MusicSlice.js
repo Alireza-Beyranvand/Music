@@ -21,6 +21,7 @@ const state = {
     filtredMusics: [],
     play: {},
     statusPlay: "pause",
+    DrawerStatus: false,
     status: "none",
     error: ""
 }
@@ -49,6 +50,9 @@ const musicSlice = createSlice({
             if (NewStatus) {
                 state.statusPlay = NewStatus
             }
+        },
+        DrawerClosed: (state , action) => {
+            state.DrawerStatus = !state.DrawerStatus
         }
     },
     extraReducers: builder => {
@@ -87,9 +91,12 @@ export const selectStatusLoading = state => state.musics.status;
 export const selectFilteredMusics = state => state.musics.filtredMusics;
 export const selectFilteredPlayedMusic = state => state.musics.play;
 export const selectStatusPlay = state => state.musics.statusPlay;
+export const selectDrawerStatus = state => state.musics.DrawerStatus;
+
+
 
 // actions 
-export const { MusicFiltered, MusicPlayed, MusicStatusPlayChanged } = musicSlice.actions
+export const { MusicFiltered, MusicPlayed, MusicStatusPlayChanged, DrawerClosed } = musicSlice.actions;
 
 
 

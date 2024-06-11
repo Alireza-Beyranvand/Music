@@ -3,13 +3,14 @@ import "./playList.css";
 import "../MainLayout/Responsive.css"
 
 import { useSelector } from "react-redux";
-import { selectAllAllbumes } from "../../reducers/MusicSlice";
+import { selectAllAllbumes, selectDrawerStatus } from "../../reducers/MusicSlice";
 import { Outlet, useLocation } from "react-router-dom";
 import MusicFolder from "../playList/musicFolder/MusicFolder";
+import { useEffect } from "react";
 
 
 
-const PlayList = ({ openList }) => {
+const PlayList = ({ openList, OpenDrawer }) => {
 
 
     // initialize useLocation
@@ -17,14 +18,26 @@ const PlayList = ({ openList }) => {
 
     // selector
     const AllAllbumes = useSelector(selectAllAllbumes);
-
+    const StatusDrawer = useSelector(selectDrawerStatus);
 
     // open and close drawer playList
     const StyleDrawer = () => {
         if (openList) {
             return { width: "96%", height: "40%" };
-        };
+        }
     };
+
+    // autoClosed Drawer
+    useEffect(() => {
+
+        //debouncing
+        setTimeout(() => {
+            OpenDrawer()
+        }, 2000);
+
+    }, [StatusDrawer])
+
+
 
     // View AllAllbum
     const AllbumList = () => {

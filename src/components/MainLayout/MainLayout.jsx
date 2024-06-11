@@ -61,7 +61,7 @@ const MainLayout = () => {
                             </div>
                             <div className="row row2 text-white" >
                                 <div className="col text-center borders" >
-                                    <PlayerBox />
+                                    <PlayerBox  />
                                 </div>
                             </div>
                         </div>

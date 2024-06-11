@@ -9,10 +9,24 @@
     text-overflow: ellipsis;
 }
 
-.EntercardMusics{
+.EntercardMusics {
     background-color: rgb(95, 95, 90) !important;
 }
 
 .cardMusics:hover {
     background-color: rgb(77, 77, 72) !important;
+}
+
+@media screen and (max-width : 400px) {
+
+    .cardM {
+        padding: -10rem !important;
+        margin: -.1rem !important;
+        font-size: .74rem;
+    }
+
+    .allbums {
+        margin: 0 !important;
+    }
+
 }

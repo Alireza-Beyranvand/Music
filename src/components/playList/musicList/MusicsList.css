@@ -59,3 +59,19 @@
 }
 
 
+@media screen and (max-width : 500px) {
+
+    .cardF {
+        margin: -.1rem;
+
+    }
+
+    .textMusicList {
+        font-size: .8rem;
+    }
+
+    .dateText {
+        font-size: .7rem !important;
+        margin: 0;
+    }
+}

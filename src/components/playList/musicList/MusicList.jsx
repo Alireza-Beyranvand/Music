@@ -5,9 +5,12 @@ import "../../MainLayout/Responsive.css";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { MusicFiltered, MusicStatusPlayChanged, selectAllAllbumes, selectFilteredPlayedMusic, selectStatusPlay } from "../../../reducers/MusicSlice";
-import { selectFilteredMusics } from "../../../reducers/MusicSlice";
-import { MusicPlayed } from "../../../reducers/MusicSlice";
+import {
+    MusicFiltered, MusicStatusPlayChanged, selectAllAllbumes,
+    selectFilteredPlayedMusic, selectStatusPlay, selectFilteredMusics
+} from "../../../reducers/MusicSlice";
+
+import { MusicPlayed , DrawerClosed} from "../../../reducers/MusicSlice";
 
 const MusicList = () => {
 
@@ -34,7 +37,7 @@ const MusicList = () => {
 
 
     // showe nameAllbum in MusicList
-    const ShowAllbum = (Id) => {
+    const ShowAllbum = () => {
         const filtered = AllAlbumes.filter((filter) => filter.id === AllbumId)
         return (
             filtered[0]
@@ -65,6 +68,7 @@ const MusicList = () => {
     const sendToPlayBox = (musicId) => {
         Dispatch(MusicPlayed(musicId))
         Dispatch(MusicStatusPlayChanged("play"))
+        Dispatch(DrawerClosed())
     }
 
 
@@ -76,7 +80,7 @@ const MusicList = () => {
                         <button
                             className={ChangeClassNameForPlay(music.id)}
                             onClick={() => sendToPlayBox(music.id)} >
-                            <div className="row">
+                            <div className="row textMusicList">
                                 <div className="col text-start mx-2 namemusic" >{music.name}</div>
                                 <div className="col dateText "  >{ShowAllbum(music.id).date}</div>
                                 <cite className="col allbum">{ShowAllbum(music.id).nameAllbum}</cite>
