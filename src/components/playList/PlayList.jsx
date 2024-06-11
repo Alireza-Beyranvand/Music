@@ -1,5 +1,6 @@
 
 import "./playList.css";
+import "../MainLayout/Responsive.css"
 
 import { useSelector } from "react-redux";
 import { selectAllAllbumes } from "../../reducers/MusicSlice";
@@ -10,7 +11,7 @@ import MusicFolder from "../playList/musicFolder/MusicFolder";
 
 const PlayList = ({ openList }) => {
 
-    
+
     // initialize useLocation
     const Location = useLocation();
 
@@ -21,7 +22,7 @@ const PlayList = ({ openList }) => {
     // open and close drawer playList
     const StyleDrawer = () => {
         if (openList) {
-            return { width: "90%", height: "24%" };
+            return { width: "96%", height: "40%" };
         };
     };
 
@@ -31,7 +32,7 @@ const PlayList = ({ openList }) => {
             <>
                 {
                     AllAllbumes.length > 0 ? (AllAllbumes.map((allbums) =>
-                        <MusicFolder allbums={allbums} />)) : (<h1>Not Found !</h1>)
+                        <MusicFolder allbums={allbums} key={allbums.id} Id={allbums.id} />)) : (<h1>Not Found !</h1>)
                 }
             </>
         )
@@ -55,7 +56,7 @@ const PlayList = ({ openList }) => {
                                     {AllbumList()}
                                 </div>
                                 <div className=" col-8 PlayListContentMusics mt-2 p-1 border rounded-3">
-                                 {Location.pathname === "/MainLayout" ? (<h2 className="mt-5"> <i className="fa fa-arrow-left"/>  Select Folder</h2>) : (<Outlet/>)}   
+                                    {Location.pathname === "/MainLayout" ? (<h2 className="mt-5"> <i className="fa fa-arrow-left" />  Select Folder</h2>) : (<Outlet />)}
                                 </div>
                             </div>
                         </div>

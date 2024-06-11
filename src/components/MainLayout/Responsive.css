@@ -1,0 +1,332 @@
+/* for pc */
+
+@media screen and (min-width : 1285px) {
+
+    /* mainLayout */
+
+    .AllContent {
+        margin-top: .67rem;
+    }
+
+    /* img player */
+
+    .imgPlayer {
+        width: 90% !important;
+        margin-top: -4rem !important;
+    }
+
+    .imgPlayerFirst {
+        width: 97% !important;
+        margin: -3.5rem 0 !important;
+    }
+
+    /* player box */
+    .boxControl {
+        margin: 1rem 0 -1rem 0 !important;
+    }
+}
+
+
+
+
+
+/* for tablet */
+
+@media screen and (max-width: 900px) {
+
+    /* mainLayout */
+
+    .AllContent {
+        margin-top: 7rem;
+    }
+
+
+    /* img player */
+
+    .imgPlayer {
+        width: 94% !important;
+        margin-top: -2rem !important;
+    }
+
+    .imgPlayerFirst {
+        width: 97% !important;
+        margin: -1rem 0 !important;
+    }
+
+
+    /* title Music */
+
+    .box2 {
+        height: 22.5rem;
+    }
+
+    .textMusic {
+        height: 25.3vw !important;
+        padding: 1.5vw !important;
+    }
+
+
+    .namemusic {
+        margin: 0 !important;
+        text-wrap: nowrap;
+    }
+
+    .dateText {
+        font-size: 1rem !important;
+    }
+
+    .iconep {
+        display: none;
+    }
+
+    .playIcon {
+        margin-right: 1rem;
+    }
+
+
+
+    .containerPlayList {
+        height: 18.5rem !important;
+    }
+
+    .PlayListContainerFolder,
+    .PlayListContentMusics {
+        height: 16.16rem !important;
+    }
+
+
+    /* MusicFolderList in playerList */
+
+    .allbums {
+        padding: .1rem 0;
+    }
+
+}
+
+
+
+
+/* for mobile */
+
+
+@media only screen and (max-width: 500px) {
+
+
+    /* mainLayout */
+    .AllContent {
+        margin-top: 3rem;
+    }
+
+    .buttonListMusics {
+        display: inline !important;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+
+    /* img player */
+
+    .imgPlayer {
+        width: 70% !important;
+        margin: -3rem 3.5rem !important;
+        height: 14rem !important;
+    }
+
+
+    .imgPlayerFirst {
+        width: 18rem !important;
+        margin: -3rem auto !important;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    /* title Music */
+
+    .box2 {
+        height: 13.5rem;
+        margin-top: 1.2rem !important;
+        box-shadow: none !important;
+    }
+
+    .TitlePlayer {
+        height: 2.6rem;
+        margin: 2.6rem !important;
+    }
+
+    .textMusic {
+        width: 20rem !important;
+        margin-top: -3rem !important;
+        height: 34vw !important;
+    }
+
+    .footerTitle {
+        margin-top: .7rem !important;
+    }
+
+
+    /* playerBox */
+
+    .boxControl {
+        margin-top: 2.9rem !important;
+    }
+
+
+    /* musicList */
+    .namemusic {
+        margin: 0 !important;
+    }
+
+    .dateText {
+        font-size: .7rem;
+        margin-top: .2rem;
+        margin: .2rem 1rem 0 0;
+    }
+
+    .iconep {
+        display: none;
+    }
+
+    .playIcon {
+        margin-right: 1rem;
+    }
+
+    .fa-animaion {
+        animation: bounceIn infinite 5s;
+    }
+
+    .allbum {
+        display: none;
+    }
+
+}
+
+/* for mobile */
+
+@media screen and (max-width : 360px) {
+
+    /* mainLayout */
+
+    .AllContent {
+        margin-top: 4rem;
+    }
+
+    /* imgs */
+
+    .imgPlayer {
+        width: 85% !important;
+        margin: -2.9rem 1.6rem !important;
+        height: 15rem !important;
+    }
+
+
+    .imgPlayerFirst {
+        width: 18rem !important;
+        width: 18rem !important;
+        margin: -3rem auto !important;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* playerBox */
+
+    .boxControl {
+        margin-top: 2.4rem !important;
+    }
+}
+
+
+/* for mobile */
+
+@media screen and (max-width : 320px) {
+
+    /* mainLayout */
+
+    .AllContent {
+        height: 30rem;
+        margin-top: 0rem;
+    }
+
+    /* imgs */
+
+    .imgPlayer {
+        width: 84% !important;
+        margin: -3.3rem 1.5rem !important;
+        height: 12rem !important;
+    }
+
+
+    .imgPlayerFirst {
+        width: 90% !important;
+        margin: -3.4rem 1rem !important;
+    }
+
+
+    /* title Music */
+
+    .box2 {
+        margin-top: 7rem !important;
+        margin-bottom: -4rem;
+        box-shadow: none !important;
+    }
+
+    .textMusic {
+        width: 17rem !important;
+        margin-top: -3rem !important;
+        height: 34vw !important;
+    }
+
+    .footerTitle {
+        margin-top: 1rem !important;
+    }
+
+    .TitlePlayer {
+        display: none;
+    }
+
+
+    /* playerBox */
+
+    .boxControl {
+        margin-top: -20rem !important;
+    }
+
+
+    /* player list */
+
+    /* musicList */
+
+    .namemusic {
+        margin: 0 !important;
+    }
+
+    .dateText {
+        font-size: .7rem;
+        margin-top: .2rem;
+        margin: .2rem 1rem 0 0;
+    }
+
+    .iconep {
+        display: none;
+    }
+
+    .playIcon {
+        margin-right: 1rem;
+    }
+
+    .fa-animaion {
+        animation: bounceIn infinite 5s;
+    }
+
+    .allbum {
+        display: none;
+    }
+
+    .dateText {
+        display: none;
+    }
+
+
+}

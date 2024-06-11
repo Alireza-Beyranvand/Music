@@ -4,7 +4,7 @@
     margin-top: -2.7rem;
     box-shadow: 1px 1px 20px rgb(8, 10, 10), -1px -1px 10px rgb(54, 49, 49),
         3px 3px 50px rgb(31, 36, 37);
-        font-family: "vazir" ;
+    font-family: "vazir";
 }
 
 .TitlePlayer {
@@ -29,8 +29,8 @@
 
 /* footer text */
 
-.footerTitle{
-text-shadow: 1px .5px 10px rgb(23, 193, 223);
+.footerTitle {
+    text-shadow: 1px .5px 10px rgb(23, 193, 223);
 }
 
 
@@ -38,6 +38,9 @@ text-shadow: 1px .5px 10px rgb(23, 193, 223);
 .textContent {
     word-wrap: break-word;
 }
+
+
+/* style for scrollbar */
 
 .textMusic::-webkit-scrollbar {
     width: .5rem;
@@ -57,24 +60,3 @@ text-shadow: 1px .5px 10px rgb(23, 193, 223);
 
 
 
-
-@media screen and (max-width: 1024px) , (min-width : 768) {
-
-/* text Music */
-.textMusic {
-    width: 25vw;
-    height: 8rem;
-    padding: .9rem;
-    text-align: center;
-    margin: auto;
-    border-radius: .5rem;
-    background-color: rgb(35, 37, 48);
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-}
-.textContent{
-    margin-top: -.5rem;
-}
-
-}

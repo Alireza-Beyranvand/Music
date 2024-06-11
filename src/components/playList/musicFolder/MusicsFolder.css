@@ -1,13 +1,18 @@
-
-.allbums{
+.allbums {
     border-radius: 5rem !important;
 }
 
-.cardM{
+.cardM {
     border: none !important;
     border-bottom: 1px solid silver !important;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
 }
 
-.cardMusics:hover{
+.EntercardMusics{
+    background-color: rgb(95, 95, 90) !important;
+}
+
+.cardMusics:hover {
     background-color: rgb(77, 77, 72) !important;
 }

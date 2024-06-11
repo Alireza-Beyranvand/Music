@@ -1,5 +1,6 @@
 
 import "./MusicsList.css"
+import "../../MainLayout/Responsive.css";
 
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -76,11 +77,11 @@ const MusicList = () => {
                             className={ChangeClassNameForPlay(music.id)}
                             onClick={() => sendToPlayBox(music.id)} >
                             <div className="row">
-                                <div className="col text-start mx-2" >{music.name}</div>
+                                <div className="col text-start mx-2 namemusic" >{music.name}</div>
                                 <div className="col dateText "  >{ShowAllbum(music.id).date}</div>
-                                <cite className="col">{ShowAllbum(music.id).nameAllbum}</cite>
+                                <cite className="col allbum">{ShowAllbum(music.id).nameAllbum}</cite>
                                 <small className="col-1 playIcon" style={ChangeStyleForIcone(music.id)}>
-                                    <i className="fa fa-play fa-animaion" />
+                                    <i className="fa fa-play fa-animaion iconep" />
                                     <i className="fa fa-music fa-animaion" />
                                 </small>
                             </div>

@@ -36,7 +36,6 @@
 }
 
 
-
 .titleListMusic {
     margin: -1rem -1rem 0 -1rem;
     background-color: #0c0c0f;
@@ -51,20 +50,77 @@
 }
 
 
-@media screen and (max-width: 940px) {
+
+
+@media screen and (max-width : 450px) {
+
+    /* playerList */
+
+    .PlayerList {
+        width: 0;
+        height: 0;
+        border-radius: 2vw;
+        position: absolute;
+        z-index: 2;
+        top: 2rem;
+        right: 2vw;
+        transition: all 1s;
+        overflow: hidden;
+    }
+
+
     .containerPlayList {
-        height: 20vw;
+        height: 30rem !important;
     }
 
     .PlayListContainerFolder {
-        height: 15.6vw;
+        height: 30vw !important;
+
+    }
+
+    .PlayListContentMusics {
+        height: 23vw !important;
         overflow-y: scroll;
         overflow-x: hidden;
     }
 
+    .containerPlayList {
+        height: 41vw !important;
+    }
+
+    .PlayListContainerFolder,
     .PlayListContentMusics {
-        height: 15.6vw;
+        height: 31vw !important;
+    }
+
+}
+
+
+
+@media screen and (max-width : 320px) {
+
+    .containerPlayList {
+        height: 30rem !important;
+    }
+
+    .PlayListContainerFolder {
+        height: 30vw !important;
+
+    }
+
+    .PlayListContentMusics {
+        height: 24vw !important;
         overflow-y: scroll;
         overflow-x: hidden;
     }
+
+    .containerPlayList {
+        height: 46vw !important;
+    }
+
+    .PlayListContainerFolder,
+    .PlayListContentMusics {
+        height: 34.4vw !important;
+    }
+
 }

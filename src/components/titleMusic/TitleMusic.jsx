@@ -1,5 +1,7 @@
 
 import "./TitleMusic.css"
+import "../MainLayout/Responsive.css";
+
 import { useSelector } from "react-redux";
 import { selectFilteredPlayedMusic } from "../../reducers/MusicSlice";
 

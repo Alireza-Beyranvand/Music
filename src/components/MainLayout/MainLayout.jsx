@@ -1,5 +1,7 @@
 
-import "./mainLayout.css"
+import "./mainLayout.css";
+import "./Responsive.css";
+
 
 import { useImmer } from "use-immer";
 import { useEffect } from "react";

@@ -1,4 +1,6 @@
 import "../playerBox/playerBox.css";
+import "../MainLayout/Responsive.css";
+
 import { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -33,7 +35,7 @@ const PlayerBox = () => {
 
     return (
         <>
-            <audio autoPlay controls src={musics} onEnded={ChangeStatusPlayEnded} />
+            <audio className="boxControl" autoPlay controls src={musics} onEnded={ChangeStatusPlayEnded} />
         </>
     )
 };

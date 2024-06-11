@@ -1,5 +1,7 @@
 
 import "./ImagePlaying.css";
+import "../../MainLayout/Responsive.css";
+
 import img from "../../../assets/img.jpg";
 import { useSelector } from "react-redux";
 import { selectFilteredPlayedMusic, selectAllAllbumes } from "../../../reducers/MusicSlice";
