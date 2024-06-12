@@ -25,6 +25,11 @@
     margin-top: 1.8rem;
 }
 
+.OpenPlayList {
+    width: 100%;
+    height: 40%;
+}
+
 .containerPlayList {
     height: 15.7vw;
     border: 1px solid rgb(156, 156, 147);
@@ -45,9 +50,6 @@
     display: none;
 }
 
-.buttonListMusics {
-    display: none;
-}
 
 
 
@@ -64,12 +66,16 @@
         border-radius: 2vw;
         position: absolute;
         z-index: 2;
-        top: 2rem;
+        top: 1rem;
         right: 2vw;
         transition: all 1s;
         overflow: hidden;
     }
 
+    .OpenPlayList {
+        width: 97%;
+        height: 40%;
+    }
 
     .containerPlayList {
         height: 30rem !important;
@@ -100,6 +106,11 @@
 
 
 @media screen and (max-width : 320px) {
+
+
+    .PlayerList {
+        top: 1rem;
+    }
 
     .containerPlayList {
         height: 30rem !important;

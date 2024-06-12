@@ -115,10 +115,20 @@
         margin-top: 3rem;
     }
 
+    /* buttons DrawerList */
+    
     .buttonListMusics {
-        display: inline !important;
+        display: inline ;
         position: fixed;
-        right: 0;
+        right: .1rem;
+        top: 0;
+    }
+
+
+    .buttonCloseListMusics {
+        display: none;
+        position: fixed;
+        right: .1rem;
         top: 0;
     }
 

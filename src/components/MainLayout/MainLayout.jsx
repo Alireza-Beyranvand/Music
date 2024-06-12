@@ -5,12 +5,12 @@ import "./Responsive.css";
 
 import { useImmer } from "use-immer";
 import { useEffect } from "react";
-import { selectStatusLoading, fetchAllbum, fetchMusics} from "../../reducers/MusicSlice";
+import { selectStatusLoading, fetchAllbum, fetchMusics } from "../../reducers/MusicSlice";
 import { useSelector, useDispatch } from "react-redux";
 import PlayerBox from "../playerBox/PlayerBox";
 import TitleMusics from "../titleMusic/TitleMusic";
 import PlayList from "../playList/PlayList";
-import ImagePlaying from "../titleMusic/imagePlaying/ImagePlaying"; 
+import ImagePlaying from "../titleMusic/imagePlaying/ImagePlaying";
 import { ToastContainer } from "react-toastify";
 
 
@@ -27,12 +27,13 @@ const MainLayout = () => {
     }
 
 
-// initialize Dispatch
+    // initialize Dispatch
     const Dispatch = useDispatch()
 
 
     // status when ReadyPage
     const status = useSelector(selectStatusLoading);
+
 
     useEffect(() => {
         if (status === "none") {
@@ -42,26 +43,40 @@ const MainLayout = () => {
     }, [])
 
 
+    // style for Buttons Drawer List
+
+    const styleButtons = (Display) => {
+        if (openList) {
+            return { display: `${Display}` }
+        }
+    }
+
+
+
     return (
         <>
             <ToastContainer position="top-right"
-                autoClose={3000} hideProgressBar={false} newestOnTopfalse
-                closeOnClick draggable />
+                autoClose={3000} hideProgressBar={false}
+                newestOnTopfalse closeOnClick draggable />
             <div className="container AllContent" >
                 <div className="row" >
                     <div className="col">
                         <div className="container " >
                             <div className="row row1" >
                                 <div className="col box text-white" >
+                                    {/* button Open Drawer */}
                                     <button className=" btn btn-secondary buttonListMusics"
-                                        onClick={OpenDrawer} > <i className="fa fa-bars" ></i></button>
-                                      <ImagePlaying />
+                                        style={styleButtons("none")} onClick={OpenDrawer} > <i className="fa fa-bars" ></i></button>
+                                    {/* button close Drawer */}
+                                    <button className=" btn btn-danger buttonCloseListMusics"
+                                        style={styleButtons("inline")} onClick={OpenDrawer} > <i className="fa fa-close" ></i></button>
+                                    <ImagePlaying />
                                 </div>
                                 <TitleMusics />
                             </div>
                             <div className="row row2 text-white" >
                                 <div className="col text-center borders" >
-                                    <PlayerBox  />
+                                    <PlayerBox />
                                 </div>
                             </div>
                         </div>

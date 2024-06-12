@@ -22,15 +22,20 @@ const PlayList = ({ openList, OpenDrawer }) => {
 
     // open and close drawer playList
     const StyleDrawer = () => {
+        const preClassName = "col-3 PlayerList";
         if (openList) {
-            return { width: "96%", height: "40%" };
+            return `${preClassName} OpenPlayList`;
+        }else{
+            return preClassName;
         }
     };
+
 
     // autoClosed Drawer
     useEffect(() => {
 
-        //debouncing
+    //debouncing
+    if(openList && StatusDrawer)
         setTimeout(() => {
             OpenDrawer()
         }, 2000);
@@ -53,7 +58,7 @@ const PlayList = ({ openList, OpenDrawer }) => {
 
     return (
         <>
-            <div className="col-3 PlayerList" style={StyleDrawer()}>
+            <div className={StyleDrawer()}>
                 <div className="col " >
                     <div className="row" >
                         <div className="col text-white text-center containerPlayList" >

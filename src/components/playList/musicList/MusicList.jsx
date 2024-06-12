@@ -11,6 +11,7 @@ import {
 } from "../../../reducers/MusicSlice";
 
 import { MusicPlayed , DrawerClosed} from "../../../reducers/MusicSlice";
+import { toast } from "react-toastify";
 
 const MusicList = () => {
 
@@ -65,10 +66,11 @@ const MusicList = () => {
 
 
     // send music to PlayerBox by Dispatch and Display Play Icone
-    const sendToPlayBox = (musicId) => {
+    const sendToPlayBox = (musicId , music) => {
         Dispatch(MusicPlayed(musicId))
         Dispatch(MusicStatusPlayChanged("play"))
         Dispatch(DrawerClosed())
+        toast.info(`Playing ${music.name}`)
     }
 
 
@@ -79,7 +81,7 @@ const MusicList = () => {
                     <div className="card cardF mb-1" >
                         <button
                             className={ChangeClassNameForPlay(music.id)}
-                            onClick={() => sendToPlayBox(music.id)} >
+                            onClick={() => sendToPlayBox(music.id , music)} >
                             <div className="row textMusicList">
                                 <div className="col text-start mx-2 namemusic" >{music.name}</div>
                                 <div className="col dateText "  >{ShowAllbum(music.id).date}</div>
