@@ -116,20 +116,22 @@
     }
 
     /* buttons DrawerList */
-    
+
     .buttonListMusics {
-        display: inline ;
+        padding: .2rem .3rem;
+        display: inline;
         position: fixed;
-        right: .1rem;
-        top: 0;
+        right: .5rem;
+        top: .1rem;
     }
 
 
     .buttonCloseListMusics {
         display: none;
         position: fixed;
-        right: .1rem;
-        top: 0;
+        padding: .2rem .4rem;
+        right: .45rem;
+        top: .1rem;
     }
 
     /* img player */
@@ -172,12 +174,16 @@
     .footerTitle {
         margin-top: .7rem !important;
     }
-
+    .footerTitle button {
+        width: 8rem !important;
+        margin-top: .6rem;
+    }
+    
 
     /* playerBox */
 
     .boxControl {
-        margin-top: 2.9rem !important;
+        margin-top: 4.4rem !important;
     }
 
 
@@ -241,8 +247,23 @@
     /* playerBox */
 
     .boxControl {
-        margin-top: 2.4rem !important;
+        margin-top: 2.5rem !important;
     }
+
+
+    /* title Music */
+
+    .footerTitle {
+        margin-top: .3rem !important;
+    }
+
+    .footerTitle button {
+        width: 40% !important;
+        padding: .1rem 2.8rem;
+        margin-top: .6rem;
+
+    }
+
 }
 
 
@@ -261,14 +282,14 @@
 
     .imgPlayer {
         width: 84% !important;
-        margin: -3.3rem 1.5rem !important;
+        margin: -3.8rem 1.5rem !important;
         height: 12rem !important;
     }
 
 
     .imgPlayerFirst {
-        width: 90% !important;
-        margin: -3.4rem 1rem !important;
+        width: 88% !important;
+        margin: -3.7rem 1.1rem !important;
     }
 
 
@@ -280,25 +301,32 @@
         box-shadow: none !important;
     }
 
+    .TitlePlayer {
+        margin: -2.8rem !important;
+    }
+
     .textMusic {
         width: 17rem !important;
-        margin-top: -3rem !important;
+        margin-top: 1.9rem !important;
         height: 34vw !important;
     }
 
     .footerTitle {
-        margin-top: 1rem !important;
+        margin-top: .3rem !important;
     }
 
-    .TitlePlayer {
-        display: none;
+    .footerTitle button {
+        width: 40% !important;
+        padding: .1rem 2.5rem;
+        margin-top: .3rem;
+
     }
 
 
     /* playerBox */
 
     .boxControl {
-        margin-top: -20rem !important;
+        margin-top: -1rem !important;
     }
 
 

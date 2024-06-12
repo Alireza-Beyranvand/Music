@@ -43,10 +43,11 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 audio::-webkit-media-controls-timeline {
-    background-color: rgb(156, 162, 167);
+    background-color: rgb(19, 195, 226);
     box-shadow: 2px 1.5px 5px rgb(46, 43, 43), -2px -2px 10px rgb(34, 34, 59);
-    border-radius: 1rem 0 1rem 0;
-    margin: 0 5rem;
+    border-radius: .5rem 0 .5rem 0;
+    margin: 0 3rem;
+    padding: .4rem;
 }
 
 
@@ -67,28 +68,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* responsive option*/
-
 
 
 @media screen and (max-width: 900px) {
     audio::-webkit-media-controls-timeline {
-        background-color: rgb(156, 162, 167);
+        background-color: rgb(12, 92, 158);
         box-shadow: 2px 1.5px 5px rgb(46, 43, 43), -2px -2px 10px rgb(34, 34, 59);
         border-radius: 1rem 0 1rem 0;
         margin: 0 2rem;
@@ -97,17 +82,11 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 
 
-
-
-
-
-
-
 @media screen and (max-width:768px) {
     audio {
         width: 100%;
+        height: 2.3rem;
     }
-
 
     audio::-webkit-media-controls-current-time-display {
         background: none !important;
@@ -127,9 +106,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     }
 
     audio::-webkit-media-controls-timeline {
-        background-color: rgb(184, 186, 189);
+        background-color: rgb(57, 113, 196);
         box-shadow: 2px 1.5px 5px rgb(46, 43, 43), -2px -2px 10px rgb(34, 34, 59);
-        border-radius: 2rem;
         margin: 0 .5rem;
     }
 
@@ -160,6 +138,34 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 
+@media screen and (max-width:320px) {
+    audio {
+        width: 100%;
+    }
 
+    audio::-webkit-media-controls-current-time-display {
+        background: none !important;
+        color: rgb(253, 248, 248);
+        border-radius: 10%;
+        padding: .2rem;
+        margin-right: -.5rem;
+        box-shadow: none;
+    }
 
+    audio::-webkit-media-controls-time-remaining-display {
+        background: none !important;
+        border-radius: 10%;
+        padding: .3rem;
+        color: rgb(255, 255, 255);
+        box-shadow: none;
+    }
 
+    audio::-webkit-media-controls-timeline {
+        background-color: rgb(166, 143, 228);
+        box-shadow: 2px 1.5px 5px rgb(46, 43, 43), -2px -2px 10px rgb(34, 34, 59);
+        border-radius: .4rem;
+        margin: .2rem;
+        padding: .3rem;
+    }
+
+}

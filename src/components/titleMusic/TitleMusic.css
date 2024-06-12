@@ -33,6 +33,11 @@
     text-shadow: 1px .5px 10px rgb(23, 193, 223);
 }
 
+.footerTitle button {
+    width: 10rem;
+    margin-right: .44rem;
+}
+
 
 /* text content */
 .textContent {
@@ -57,6 +62,4 @@
     box-shadow: inset 0px -1px 13px #545468 !important;
     border-radius: 10px;
 }
-
-
 

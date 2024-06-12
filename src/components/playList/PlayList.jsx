@@ -58,18 +58,18 @@ const PlayList = ({ openList, OpenDrawer }) => {
 
     return (
         <>
-            <div className={StyleDrawer()}>
+            <div className={StyleDrawer()} >
                 <div className="col " >
                     <div className="row" >
                         <div className="col text-white text-center containerPlayList" >
-                            <div className="row titleListMusic" >
+                            <div className="row titleListMusic"  >
                                 <div className="col-4 border rounded-2" >
                                     Folder </div>
                                 <div className="col-8 border rounded" >
                                     musics
                                 </div>
                             </div>
-                            <div className=" row PlayListContent " >
+                            <div className=" row PlayListContent">
                                 <div className="col PlayListContainerFolder mt-2 p-1 text-start border rounded-3" >
                                     {AllbumList()}
                                 </div>

@@ -1,0 +1,15 @@
+
+
+
+
+.searchBox {
+    position: absolute !important;
+    z-index: 3;
+    width: 50%;
+    right: 0;
+    bottom: 5rem;
+    border-radius: 1rem;
+    background-color: rgb(21, 25, 29);
+}
+
+

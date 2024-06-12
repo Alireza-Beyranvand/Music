@@ -67,10 +67,13 @@ const MusicList = () => {
 
     // send music to PlayerBox by Dispatch and Display Play Icone
     const sendToPlayBox = (musicId , music) => {
+        toast.dismiss()
         Dispatch(MusicPlayed(musicId))
         Dispatch(MusicStatusPlayChanged("play"))
         Dispatch(DrawerClosed())
-        toast.info(`Playing ${music.name}`)
+        toast.success(`"${music.name}" please wait ...` ,{
+            autoClose: 5000
+        })
     }
 
 

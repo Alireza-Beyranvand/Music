@@ -4,7 +4,7 @@
 /* Styles firstpage Component */
 
 .card-img-top {
-    width: 30%;
+    width: 36% !important;
     margin: auto;
     box-shadow: 2px 2px 5px rgb(19, 19, 20);
 }
@@ -19,6 +19,7 @@
 
 .textOne {
     font-size: 6vw;
+    margin-top: .5rem !important;
     font-family: Servillana, Georgia, 'Times New Roman', Times, serif;
     text-shadow: 0 0 5px #d1c9c9 , 0 0 10px #555454 , 0 0 25px #414344 , 0 0 30px #0073e6;
 }
@@ -26,14 +27,14 @@
 .textTwo {
     width: 40vw;
     border-radius: 2rem;
-    margin: 1.3rem auto;
+    margin: 1rem auto;
     font-size: 4.5vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     animation: color infinite 3s;
     color: aqua !important;
 }
 
-.iconPlay {
+.iconPlayGo {
     animation: shake infinite 1s;
 }
 
@@ -56,11 +57,15 @@
     }
 }
 
+
+
+
+
 /* responsive option*/
 @media screen and (min-width: 1024px) {
 
     .containerFirstPage {
-        margin-top: 2.5% !important;
+        margin-top: 2.9% !important;
     }
 }
 

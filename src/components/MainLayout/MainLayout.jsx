@@ -29,7 +29,10 @@ const MainLayout = () => {
     const OpenDrawer = () => {
         setOpenList((draft) => !draft)
     }
-
+    // click on screen Open
+    const closeDrawer = () => {
+        setOpenList(false)
+    }
 
     // initialize Dispatch
     const Dispatch = useDispatch()
@@ -45,7 +48,7 @@ const MainLayout = () => {
                 Dispatch(fetchMusics());
                 Dispatch(fetchAllbum())
             }
-            , 1000)
+                , 1000)
         }
     }, [])
 
@@ -68,19 +71,20 @@ const MainLayout = () => {
                 (
                     <>
                         <ToastContainer position="top-right"
-                            autoClose={3000} hideProgressBar={false}
-                            newestOnTopfalse closeOnClick draggable />
-                        <div className="container AllContent Scroll" >
+                            autoClose={1300} hideProgressBar={false}
+                            newestOnTopfalse closeOnClick draggable theme="dark"
+                           />
+                        <div className="container AllContent Scroll">
                             <div className="row" >
                                 <div className="col">
                                     <div className="container " >
                                         <div className="row row1" >
-                                            <div className="col box text-white Scroll" >
+                                            <div className="col box text-white Scroll"  >
                                                 {/* button Open Drawer */}
                                                 <button className=" btn btn-secondary buttonListMusics"
                                                     style={styleButtons("none")} onClick={OpenDrawer} > <i className="fa fa-bars" ></i></button>
                                                 {/* button close Drawer */}
-                                                <button className=" btn btn-danger buttonCloseListMusics"
+                                                <button className=" btn btn-secondary buttonCloseListMusics"
                                                     style={styleButtons("inline")} onClick={OpenDrawer} > <i className="fa fa-close" ></i></button>
                                                 <ImagePlaying />
                                             </div>
