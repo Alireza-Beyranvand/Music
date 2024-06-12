@@ -25,3 +25,23 @@
     display: none;
 }
 
+
+/* animation for All*/
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+  }
+  
+  .Scroll{
+    animation-duration: 1s;
+    animation-name: bounceIn;
+  }
+  
