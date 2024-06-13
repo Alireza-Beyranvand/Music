@@ -2,24 +2,43 @@
 import "./SearchMusics.css"
 
 import { useSelector, useDispatch } from "react-redux";
-import { MusicSearchedPlayed, MusicStatusPlayChanged, selectAllMusics } from "../../../reducers/MusicSlice";
-import { useState } from "react";
+import { MusicSearchedPlayed, MusicStatusPlayChanged, selectAllMusics, selectStatusPlay } from "../../../reducers/MusicSlice";
+import { useEffect, useState, useRef } from "react";
 import { toast } from "react-toastify";
 
-
-const SearchMusics = () => {
-
-    const Dispatch = useDispatch()
-
-    const AllMusics = useSelector(selectAllMusics)
+const SearchMusics = ({ setOpenSearchBox }) => {
 
 
-    const [filredMusics, setFiltredMusics] = useState({})
-    const [DisplayMusics, setDisplayMusics] = useState({})
+    // Close SearchBox
+    const CloseSearchBox = () => {
+        setOpenSearchBox(false)
+    }
+
+    const Dispatch = useDispatch();
+
+    const AllMusics = useSelector(selectAllMusics);
+    const StatusPlay = useSelector(selectStatusPlay)
+
+    const [filredMusics, setFiltredMusics] = useState({});
+    const [DisplayMusics, setDisplayMusics] = useState({});
 
 
 
+    // auto foucus when is render
+    const focus = useRef(null);
 
+
+
+    useEffect(() => {
+        // start focus
+        focus.current.focus()
+        // empty States
+        setFiltredMusics(null)
+        setFiltredMusics(null)
+    }, [setOpenSearchBox])
+
+
+    // search filter
     const Search = () => {
         const Filtered = AllMusics.filter((filter) => filter.name.toUpperCase()
             .includes((filredMusics.toUpperCase())));
@@ -35,15 +54,19 @@ const SearchMusics = () => {
 
     // send music to PlayerBox by Dispatch and Display Play Icone
     const sendToPlayBox = (musicsId, musics) => {
+        //close SearcjBox
+        CloseSearchBox()
+        //toast dismiss
         toast.dismiss()
         Dispatch(MusicSearchedPlayed(musicsId))
         Dispatch(MusicStatusPlayChanged("play"))
+        //toast succses
         toast.success(`"${musics.name}" please wait ...`, {
             autoClose: 5000
         })
     }
 
-
+    // show Music filtered by search
     const ShowMusicsFiltred = () => {
         return (
             <>
@@ -64,16 +87,17 @@ const SearchMusics = () => {
     return (
         <>
 
-        <button className="buttonCloseSearchBox btn btn-danger w-50 p-0"><i  className="fa fa-close" ></i></button>
             <div className="row searchBox" >
+                <div className="col m-0 mb-3 buttonCloseSearchBox " >
+                    <button className=" btn btn-danger w-25 p-0" onClick={CloseSearchBox}><i className="fa fa-close" ></i></button>
+                </div>
                 <div className="row mx-1" >
-                    <input className="form-control p-0 w-50 mx-auto mb-4 text-center"
+                    <input className="form-control p-0 w-50 mx-auto mb-4 text-center" ref={focus}
                         placeholder="Name Music" onChange={(event) => setFiltredMusics(event.target.value)} />
                     <div className="col">
                         <button className="btn btn-outline-light w-100 py-0 mx-2" onClick={Search}>Search</button>
                     </div>
                 </div>
-
                 <div className="row serachResult mb-4 mx-1 " >
                     <div className="labelserachResult pt-1 mb-1">
                         serachResult

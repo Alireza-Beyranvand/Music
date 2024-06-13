@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { MusicRepetitioned, selectFilteredPlayedMusic, selectMusicRepetition } from "../../reducers/MusicSlice";
 import { toast } from "react-toastify";
 import SearchMusics from "./searchMusic/SearchMusics";
+import { useState } from "react";
 
 
 const TitleMusics = () => {
@@ -17,6 +18,20 @@ const TitleMusics = () => {
     // selectots
     const setPlayingMusic = useSelector(selectFilteredPlayedMusic);
     const StatusRepetition = useSelector(selectMusicRepetition)
+
+
+    // Open SearchBox
+    const [OpenSearchBox, setOpenSearchBox] = useState(false);
+
+    // style for SearchBox
+
+    const SearchStyles = () => {
+        if (OpenSearchBox) {
+            return { display: "inline" }
+        } else {
+            return { display: "none" }
+        }
+    }
 
 
     // Music Text
@@ -62,6 +77,7 @@ const TitleMusics = () => {
         }
     }
 
+
     return (
         <>
 
@@ -82,12 +98,12 @@ const TitleMusics = () => {
                             onClick={() => MusicRepartition()} title="repartition" >
                             <i className="fa-solid fa-repeat pt-1" /></button>
                     </div>
-
-                    {/* <button type="button" className="btn btn-secondary">2</button> */}
-                    <button className="btn ">
-                        
+                    {/* button for Open SearchBox */}
+                    <button className="btn  btnOpenSearchBox"
+                        onClick={() => setOpenSearchBox(true)}>
+                        <i className="fa fa-search text-white" />
                     </button>
-                    <SearchMusics />
+                    {OpenSearchBox ? (<SearchMusics setOpenSearchBox={setOpenSearchBox} />) : null}
                 </div>
             </div>
 

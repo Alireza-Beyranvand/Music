@@ -5,7 +5,8 @@
     right: 12rem;
     top: 24rem;
     border-radius: 1rem;
-    background-color: rgb(37, 36, 56);
+    background-color: rgb(50, 50, 54);
+    box-shadow: 1px 1px 8px rgb(16, 12, 20) , -2px -2px 90px rgb(29, 29, 39);
     padding: 3rem;
 }
 
@@ -38,7 +39,5 @@
 
 
 .buttonCloseSearchBox{
-    position: absolute;
-    right: 10.8rem;
-    z-index: 4;
+    margin-top: -2rem !important;
 }
