@@ -80,7 +80,7 @@ const TitleMusics = () => {
                     <div className="btn-group" role="group">
                         <button className={StyleButtonMusicRepartition()} z
                             onClick={() => MusicRepartition()} title="repartition" >
-                            <i className="fa-solid fa-repeat" /></button>
+                            <i className="fa-solid fa-repeat pt-1" /></button>
                     </div>
 
                     {/* <button type="button" className="btn btn-secondary">2</button> */}

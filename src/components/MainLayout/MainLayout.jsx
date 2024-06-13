@@ -47,8 +47,7 @@ const MainLayout = () => {
             setTimeout(() => {
                 Dispatch(fetchMusics());
                 Dispatch(fetchAllbum())
-            }
-                , 1000)
+            }, 1000)
         }
     }, [])
 
@@ -73,7 +72,7 @@ const MainLayout = () => {
                         <ToastContainer position="top-right"
                             autoClose={1300} hideProgressBar={false}
                             newestOnTopfalse closeOnClick draggable theme="dark"
-                           />
+                        />
                         <div className="container AllContent Scroll">
                             <div className="row" >
                                 <div className="col">

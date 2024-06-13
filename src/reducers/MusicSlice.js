@@ -40,10 +40,17 @@ const musicSlice = createSlice({
             }
         },
         MusicPlayed: (state, action) => {
-            const MusicId = action.payload
+            const MusicId = action.payload;
             const filtredForPlay = state.filtredMusics.filter((music) => music.id === MusicId)
             if (filtredForPlay) {
                 state.play = filtredForPlay
+            }
+        },
+        MusicSearchedPlayed: (state, action) => {
+            const MusicId = action.payload;
+            const filtred = state.musics.filter((music) => music.id === MusicId)
+            if (filtred) {
+                state.play = filtred
             }
         },
         MusicStatusPlayChanged: (state, action) => {
@@ -101,7 +108,7 @@ export const selectMusicRepetition = state => state.musics.repetitionMusic;
 
 // actions 
 export const { MusicFiltered, MusicPlayed, MusicStatusPlayChanged,
-    DrawerClosed, MusicRepetitioned } = musicSlice.actions;
+    DrawerClosed, MusicRepetitioned , MusicSearchedPlayed} = musicSlice.actions;
 
 
 

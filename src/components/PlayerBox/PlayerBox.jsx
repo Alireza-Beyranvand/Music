@@ -19,6 +19,8 @@ const PlayerBox = () => {
     // musics for playing
     const musicsForPlay = useSelector(selectFilteredPlayedMusic)
 
+console.log(musicsForPlay)
+
     // status MusicRepetitioned
     const StatusRepetition = useSelector(selectMusicRepetition)
 
