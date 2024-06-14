@@ -23,17 +23,7 @@ const TitleMusics = () => {
     // Open SearchBox
     const [OpenSearchBox, setOpenSearchBox] = useState(false);
 
-    // style for SearchBox
-
-    const SearchStyles = () => {
-        if (OpenSearchBox) {
-            return { display: "inline" }
-        } else {
-            return { display: "none" }
-        }
-    }
-
-
+    
     // Music Text
     const ReadyPlayingText = () => {
         if (setPlayingMusic.length >= 0 && setPlayingMusic[0]) {
@@ -78,6 +68,15 @@ const TitleMusics = () => {
     }
 
 
+    const classChange = () => {
+        if (OpenSearchBox) {
+            return "row searchBox searchBox2"
+        } else {
+            return "row searchBox "
+        }
+    }
+
+
     return (
         <>
 
@@ -103,7 +102,9 @@ const TitleMusics = () => {
                         onClick={() => setOpenSearchBox(true)}>
                         <i className="fa fa-search text-white" />
                     </button>
-                    {OpenSearchBox ? (<SearchMusics setOpenSearchBox={setOpenSearchBox} />) : null}
+                    <div className={classChange()} >
+                        <SearchMusics OpenSearchBox={OpenSearchBox} setOpenSearchBox={setOpenSearchBox} />
+                    </div>
                 </div>
             </div>
 

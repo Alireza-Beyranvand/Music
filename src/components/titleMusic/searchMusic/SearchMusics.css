@@ -2,14 +2,21 @@
     position: absolute !important;
     z-index: 3;
     width: 50%;
-    right: 12rem;
-    top: 24rem;
+    right: 1rem;
+    top:15rem;
     border-radius: 1rem;
     background-color: rgb(50, 50, 54);
     box-shadow: 1px 1px 8px rgb(16, 12, 20) , -2px -2px 90px rgb(29, 29, 39);
     padding: 3rem;
+    transition: all .5s;
+    overflow: hidden;
+    transform: scale(0);
+
 }
 
+.searchBox2{
+transform: scale(1);
+}
 
 .serachResult {
     width: 100%;
@@ -40,4 +47,13 @@
 
 .buttonCloseSearchBox{
     margin-top: -2rem !important;
+}
+
+.fa-search , .fa-repeat{
+    text-shadow: 1px 0px 10px rgb(150, 156, 156) ;
+}
+
+
+.errors{
+    margin-top: 4rem;
 }
