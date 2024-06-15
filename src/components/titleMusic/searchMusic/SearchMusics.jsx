@@ -19,10 +19,13 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
         setOpenSearchBox(false)
     }
 
+    //initialize useDispatch
     const Dispatch = useDispatch();
 
+    // recived All Musics
     const AllMusics = useSelector(selectAllMusics);
 
+    //states
     const [filtredMusics, setFiltredMusics] = useState({});
     const [DisplayMusics, setDisplayMusics] = useState({});
     const [spinner, setSpinner] = useState(false)
@@ -48,9 +51,7 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
 
 
     // search filter
-
     // recived content from Input
-
     const recivedInput = (event) => {
         //debounce
         setTimeout(() => {
@@ -62,7 +63,7 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
     const Search = () => {
         setSpinner((pre) => !pre)
         const Filtered = AllMusics.filter((filter) => filter.name.toUpperCase()
-            .includes((filtredMusics.toUpperCase())) );
+            .includes((filtredMusics.toUpperCase())));
 
         if (filtredMusics.length < 0 || filtredMusics === null) {
             setDisplayMusics({})
@@ -75,7 +76,8 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
         }
     }
 
-    //validatio 
+
+    //validatio SearchInput
     const validation = [filtredMusics].every(Boolean);
 
 
@@ -110,7 +112,6 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
                         </button>) : DisplayMusics.length === 0 ? (<h1 className="errors">No music</h1>)
                         : <h1 className="errors">Search Musics </h1>
                 }
-
             </>
         )
     }
@@ -119,7 +120,6 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
 
     return (
         <>
-
 
             <div className="col m-0 mb-3 buttonCloseSearchBox " >
                 <button className=" btn btn-danger w-25 p-0" onClick={CloseSearchBox}><i className="fa fa-close" ></i></button>
@@ -141,10 +141,10 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
                     </div>) : ShowMusicsFiltred()}
                 </div>
             </div>
+
         </>
     )
 };
-
 
 
 export default SearchMusics;

@@ -24,7 +24,6 @@ const Loading = () => {
 
     return (
         <Modal style={customStyles} isOpen >
-
             <div className="container" >
                 <div className="row" >
                     <div className="col" >

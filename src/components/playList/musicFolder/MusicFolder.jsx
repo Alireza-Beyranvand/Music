@@ -7,8 +7,6 @@ import { Link, useLocation } from "react-router-dom";
 
 const MusicFolder = ({ allbums, Id }) => {
 
-
-
      // initialize useLocation
     const Location = useLocation()
 

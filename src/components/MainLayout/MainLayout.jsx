@@ -1,22 +1,22 @@
-
+// css
 import "./mainLayout.css";
 import "./Responsive.css";
-
 
 import { useImmer } from "use-immer";
 import { useEffect } from "react";
 import { selectStatusLoading, fetchAllbum, fetchMusics } from "../../reducers/MusicSlice";
 import { useSelector, useDispatch } from "react-redux";
 
-
 // Components
-
 import PlayerBox from "../playerBox/PlayerBox";
 import TitleMusics from "../titleMusic/TitleMusic";
 import PlayList from "../playList/PlayList";
 import ImagePlaying from "../titleMusic/imagePlaying/ImagePlaying";
-import { ToastContainer } from "react-toastify";
 import Loading from "../SpinnerLoading/Loading";
+
+// react-toastify
+import { ToastContainer } from "react-toastify";
+
 
 const MainLayout = () => {
 
@@ -28,10 +28,6 @@ const MainLayout = () => {
     // open drawer
     const OpenDrawer = () => {
         setOpenList((draft) => !draft)
-    }
-    // click on screen Open
-    const closeDrawer = () => {
-        setOpenList(false)
     }
 
     // initialize Dispatch
@@ -53,13 +49,11 @@ const MainLayout = () => {
 
 
     // style for Buttons Drawer List
-
     const styleButtons = (Display) => {
         if (openList) {
             return { display: `${Display}` }
         }
     }
-
 
 
     return (
@@ -102,8 +96,6 @@ const MainLayout = () => {
 
                     </>
                 )
-
-
             }
 
         </>

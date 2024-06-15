@@ -4,7 +4,7 @@ import "../MainLayout/Responsive.css";
 import { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { selectFilteredPlayedMusic , MusicStatusPlayChanged, selectMusicRepetition } from "../../reducers/MusicSlice";
+import { selectFilteredPlayedMusic, MusicStatusPlayChanged, selectMusicRepetition } from "../../reducers/MusicSlice";
 
 
 
@@ -19,12 +19,10 @@ const PlayerBox = () => {
     // musics for playing
     const musicsForPlay = useSelector(selectFilteredPlayedMusic)
 
-console.log(musicsForPlay)
-
     // status MusicRepetitioned
     const StatusRepetition = useSelector(selectMusicRepetition)
 
-
+    // for send to playe
     useEffect(() => {
 
         if (musicsForPlay.length >= 0) {
@@ -33,7 +31,7 @@ console.log(musicsForPlay)
     }, [musicsForPlay])
 
 
-// When the music is finished, it will be sent
+    // When the music is finished, it will be sent
     const ChangeStatusPlayEnded = () => {
         Dispatch(MusicStatusPlayChanged("pause"))
     }

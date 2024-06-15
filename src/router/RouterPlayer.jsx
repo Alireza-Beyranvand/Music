@@ -24,7 +24,7 @@ export const RouterPlayer = createBrowserRouter([
                 path: "/MainLayout/musics/:AllbumId/playerBox",
                 element: <PlayerBox />
             }
-        ]
+        ] ,
     }
 ]);
 

@@ -5,12 +5,16 @@ import "../../MainLayout/Responsive.css";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+
+// selectors
 import {
     MusicFiltered, MusicStatusPlayChanged, selectAllAllbumes,
     selectFilteredPlayedMusic, selectStatusPlay, selectFilteredMusics
 } from "../../../reducers/MusicSlice";
 
+// actions
 import { MusicPlayed, DrawerClosed } from "../../../reducers/MusicSlice";
+// tostify
 import { toast } from "react-toastify";
 
 const MusicList = () => {

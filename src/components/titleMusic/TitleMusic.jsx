@@ -44,7 +44,6 @@ const TitleMusics = () => {
 
 
     // Select Button repartition Music
-
     const MusicRepartition = () => {
         // disableing toast for reSelect
         toast.dismiss()
@@ -89,7 +88,6 @@ const TitleMusics = () => {
                 </p>
                 <div className="container text-center
                 text-white my-3 mt-3 footerTitle">
-
                     {/* button for active MusicRepartition */}
                     <div className="btn-group" role="group">
                         <button className={StyleButtonMusicRepartition()} z
