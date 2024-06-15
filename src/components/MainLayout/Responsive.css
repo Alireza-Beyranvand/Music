@@ -11,12 +11,13 @@
     /* img player */
 
     .imgPlayer {
-        width: 90% !important;
-        margin-top: -4rem !important;
+        width: 87% !important;
+        height: 27rem !important;
+        margin-top: -3rem !important;
     }
 
     .imgPlayerFirst {
-        width: 97% !important;
+        width: 86% !important;
         margin: -3.5rem 0 !important;
     }
 
@@ -84,6 +85,32 @@
     }
 
 
+    /* serachBox */
+
+
+    .searchBox {
+        position: absolute !important;
+        z-index: 3;
+        width: 70% !important;
+        border-radius: 1rem;
+        background-color: rgb(50, 50, 54);
+        box-shadow: 1px 1px 8px rgb(16, 12, 20), -2px -2px 90px rgb(29, 29, 39);
+        padding: 3rem;
+        transition: all .5s;
+        overflow: hidden;
+        transform: scale(0);
+
+    }
+
+    /* button search and repetition */
+    .repetition,
+    .btnOpenSearchBox {
+        width: 30% !important;
+        padding: .4rem 1.5rem;
+        margin: 0 rem;
+    }
+
+    /* play List */
 
     .containerPlayList {
         height: 18.5rem !important;
@@ -93,6 +120,7 @@
     .PlayListContentMusics {
         height: 16.16rem !important;
     }
+
 
 
     /* MusicFolderList in playerList */
@@ -156,7 +184,7 @@
 
     .box2 {
         height: 13.5rem;
-        margin-top: 1.2rem !important;
+        margin-top: 1.5rem !important;
         box-shadow: none !important;
     }
 
@@ -167,18 +195,63 @@
 
     .textMusic {
         width: 20rem !important;
-        margin-top: -3rem !important;
+        margin-top: -2.3rem !important;
         height: 34vw !important;
     }
 
     .footerTitle {
-        margin-top: .7rem !important;
+        margin-top: .65rem !important;
     }
+
     .footerTitle button {
         width: 8rem !important;
-        margin-top: .6rem;
+        margin-top: .3rem;
     }
-    
+
+
+
+    /* search box */
+
+    .searchBox {
+        position: absolute !important;
+        z-index: 3;
+        width: 80% !important;
+        right: 3rem !important;
+        top: 30% !important;
+        padding: 1rem !important;
+    }
+
+
+    .serachResult {
+        width: 90% !important;
+        height: 8.8rem !important;
+        margin: auto !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .textContentSearch {
+        display: none;
+    }
+
+    .buttonCloseSearchBox {
+        margin-left: 1rem !important;
+    }
+
+
+    .form-control {
+        width: 75% !important;
+        margin-top: 1rem;
+        margin-bottom: .5rem !important;
+    }
+
+    .btn-outline-light {
+        margin-bottom: 1rem;
+    }
+
+
+    .errors {
+        margin-top: 3rem !important;
+    }
 
     /* playerBox */
 
@@ -223,14 +296,14 @@
     /* mainLayout */
 
     .AllContent {
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
 
     /* imgs */
 
     .imgPlayer {
         width: 85% !important;
-        margin: -2.9rem 1.6rem !important;
+        margin: -2.8rem 1.6rem !important;
         height: 15rem !important;
     }
 
@@ -238,7 +311,7 @@
     .imgPlayerFirst {
         width: 18rem !important;
         width: 18rem !important;
-        margin: -3rem auto !important;
+        margin: -2.7rem auto !important;
         display: flex;
         justify-content: center;
     }
@@ -263,6 +336,23 @@
         margin-top: .6rem;
 
     }
+
+    /* btn search and repetition */
+
+    .btn-group {
+        margin-top: -.7rem !important;
+    }
+
+    .fa-search {
+        padding-bottom: .66rem;
+    }
+
+    /* playerBox */
+
+    .boxControl {
+        margin-top: 2.7rem !important;
+    }
+
 
 }
 
@@ -296,7 +386,7 @@
     /* title Music */
 
     .box2 {
-        margin-top: 7rem !important;
+        margin-top: 7.5rem !important;
         margin-bottom: -4rem;
         box-shadow: none !important;
     }
@@ -320,6 +410,44 @@
         padding: .1rem 2.5rem;
         margin-top: .3rem;
 
+    }
+
+    /* btn search and repetition */
+
+    .btn-group {
+        margin-top: -.3rem !important;
+    }
+
+    .fa-search {
+        padding-bottom: .66rem;
+    }
+
+    /* search box */
+
+    .searchBox {
+        top: 14% !important;
+    }
+
+    .buttonCloseSearchBox {
+        margin-left: 1rem !important;
+    }
+
+    .btn-outline-light {
+        padding: 0 !important;
+    }
+
+    .btnResualtSearch {
+        display: flex;
+        justify-content: center;
+        margin-left: 2.5rem !important;
+        overflow: hidden;
+        font-size: .9rem !important;
+
+    }
+
+    .errors {
+        margin-top: 3rem !important;
+        font-size: 1.3rem !important;
     }
 
 

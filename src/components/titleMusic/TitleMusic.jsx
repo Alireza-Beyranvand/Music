@@ -23,7 +23,7 @@ const TitleMusics = () => {
     // Open SearchBox
     const [OpenSearchBox, setOpenSearchBox] = useState(false);
 
-    
+
     // Music Text
     const ReadyPlayingText = () => {
         if (setPlayingMusic.length >= 0 && setPlayingMusic[0]) {
@@ -61,13 +61,13 @@ const TitleMusics = () => {
     // trun on MusicRepartition 
     const StyleButtonMusicRepartition = () => {
         if (StatusRepetition) {
-            return "btn btn-primary mx-2"
+            return "btn repetition btn-primary mx-2"
         } else {
-            return "btn text-white mx-2"
+            return "btn repetition text-white mx-2"
         }
     }
 
-
+    // changeClass for Open SearchBox
     const classChange = () => {
         if (OpenSearchBox) {
             return "row searchBox searchBox2"
@@ -75,7 +75,6 @@ const TitleMusics = () => {
             return "row searchBox "
         }
     }
-
 
     return (
         <>
@@ -98,10 +97,12 @@ const TitleMusics = () => {
                             <i className="fa-solid fa-repeat pt-1" /></button>
                     </div>
                     {/* button for Open SearchBox */}
-                    <button className="btn  btnOpenSearchBox"
-                        onClick={() => setOpenSearchBox(true)}>
-                        <i className="fa fa-search text-white" />
-                    </button>
+                    <div className="btn-group" role="group">
+                        <button className="btn btnOpenSearchBox pt-2"
+                            onClick={() => setOpenSearchBox(true)} title="Search Music (in All Folder)">
+                            <i className="fa fa-search text-white" />
+                        </button>
+                    </div>
                     <div className={classChange()} >
                         <SearchMusics OpenSearchBox={OpenSearchBox} setOpenSearchBox={setOpenSearchBox} />
                     </div>

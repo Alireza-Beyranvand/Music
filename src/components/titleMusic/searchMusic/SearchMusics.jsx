@@ -1,6 +1,7 @@
 
 import "./SearchMusics.css"
-
+import "../../MainLayout/Responsive.css"
+import Spinner from "./Spinner.module.css"
 
 import { useSelector, useDispatch } from "react-redux";
 import { MusicSearchedPlayed, MusicStatusPlayChanged, selectAllMusics } from "../../../reducers/MusicSlice";
@@ -24,7 +25,7 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
 
     const [filtredMusics, setFiltredMusics] = useState({});
     const [DisplayMusics, setDisplayMusics] = useState({});
-
+    const [spinner, setSpinner] = useState(false)
 
 
     // auto foucus when is render
@@ -49,25 +50,33 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
     // search filter
 
     // recived content from Input
+
     const recivedInput = (event) => {
         //debounce
         setTimeout(() => {
             setFiltredMusics(event)
-        }, [])
+        }, 200)
     }
 
-// button search and Filter by filtredMusics
+    // button search and Filter by filtredMusics
     const Search = () => {
+        setSpinner((pre) => !pre)
         const Filtered = AllMusics.filter((filter) => filter.name.toUpperCase()
-            .includes((filtredMusics.toUpperCase())));
+            .includes((filtredMusics.toUpperCase())) );
 
-        if (filtredMusics.length < 0) {
+        if (filtredMusics.length < 0 || filtredMusics === null) {
             setDisplayMusics({})
+            setSpinner(false)
         } else {
-            setDisplayMusics(Filtered)
+            setTimeout(() => {
+                setSpinner(false)
+                setDisplayMusics(Filtered)
+            }, 600)
         }
-
     }
+
+    //validatio 
+    const validation = [filtredMusics].every(Boolean);
 
 
     // send music to PlayerBox by Dispatch and Display Play Icone
@@ -93,7 +102,12 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
                     DisplayMusics.length > 0 ? DisplayMusics.map((musics) =>
                         <button onClick={() => sendToPlayBox(musics.id, musics)}
                             key={musics.id} className="btn btn-outline-secondary 
-                   text-white w-100 mt-1 border" >{musics.name}</button>) : DisplayMusics.length === 0 ? (<h1 className="errors">No music</h1>)
+                          btnResualtSearch text-white w-100 mt-1 border" >
+                            <div className="row" >
+                                <div className="col textContentSearch" >{musics.text}</div>
+                                <div className="col" >{musics.name}</div>
+                            </div>
+                        </button>) : DisplayMusics.length === 0 ? (<h1 className="errors">No music</h1>)
                         : <h1 className="errors">Search Musics </h1>
                 }
 
@@ -112,9 +126,10 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
             </div>
             <div className="row mx-1" >
                 <input className="form-control p-0 w-50 mx-auto mb-4 text-center" ref={focus}
-                    placeholder="Name Music" onChange={(event) => recivedInput(event.target.value)} />
+                    placeholder="Music Name" onChange={(event) => recivedInput(event.target.value)} />
                 <div className="col">
-                    <button className="btn btn-outline-light w-100 py-0 mx-2" onClick={() => Search()}>Search</button>
+                    <button className="btn btn-outline-light w-100 py-0 mx-2"
+                        onClick={() => Search()} disabled={!validation}>Search</button>
                 </div>
             </div>
             <div className="row serachResult mb-4 mx-1 " >
@@ -122,7 +137,8 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
                     serachResult
                 </div>
                 <div className="serachResultContent mt-1 px-2 pt-1" >
-                    {ShowMusicsFiltred()}
+                    {spinner ? (<div className={`${Spinner.loader}`}>
+                    </div>) : ShowMusicsFiltred()}
                 </div>
             </div>
         </>
