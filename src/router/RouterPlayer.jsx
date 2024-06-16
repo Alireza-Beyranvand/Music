@@ -25,6 +25,8 @@ export const RouterPlayer = createBrowserRouter([
                 element: <PlayerBox />
             }
         ] ,
-    }
-]);
+    } 
+] , {
+    basename : "/Music"
+});
 
