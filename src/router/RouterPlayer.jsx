@@ -8,9 +8,10 @@ import PlayerBox from "../components/playerBox/PlayerBox";
 
 export const RouterPlayer = createBrowserRouter([
     {
-        path: "/Music/",
+        path: "/",
         element: <App />,
         errorElement: <h1>Not found !</h1>,
+
     },
     {
         path: "/MainLayout",
@@ -24,9 +25,7 @@ export const RouterPlayer = createBrowserRouter([
                 path: "/MainLayout/musics/:AllbumId/playerBox",
                 element: <PlayerBox />
             }
-        ] ,
-    }
-],{
-    basename : "/Music"
-});
+        ],
 
+    }
+], { basename: "/Music" });
