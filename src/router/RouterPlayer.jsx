@@ -8,7 +8,7 @@ import PlayerBox from "../components/playerBox/PlayerBox";
 
 export const RouterPlayer = createBrowserRouter([
     {
-        path: "/",
+        path: "/Music",
         element: <App />,
         errorElement: <h1>Not found !</h1>,
 
@@ -28,4 +28,4 @@ export const RouterPlayer = createBrowserRouter([
         ],
 
     }
-], { basename: "/Music" });
+]);
