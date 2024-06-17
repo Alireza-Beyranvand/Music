@@ -38,8 +38,10 @@ const SearchMusics = ({ OpenSearchBox, setOpenSearchBox }) => {
 
     useEffect(() => {
         // start focus
-        focus.current.focus()
-        focus.current.value = "";
+        if (OpenSearchBox) {
+            focus.current.focus()
+            focus.current.value = "";
+        }
         // empty States +
         //debounce
         setTimeout(() => {

@@ -71,7 +71,7 @@ const TitleMusics = () => {
         if (OpenSearchBox) {
             return "row searchBox searchBox2"
         } else {
-            return "row searchBox "
+            return "row searchBox"
         }
     }
 
